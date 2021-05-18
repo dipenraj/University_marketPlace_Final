@@ -132,7 +132,7 @@ echo "</div>";
                 <div id="related_courses" class="owlCarousel">
                     <div class="single-courses">
                         <div class="courses_banner_wrapper">
-                            <div class="courses_banner"><a href="#"><img src="C:\wamp64\www\Uni\images\Education.jpg" alt="" class="img-fluid"></a></div>
+                            <div class="courses_banner"><a href="#"><img src="images\Education.jpg" alt="" class="img-fluid"></a></div>
                            
                         </div>
                         <div class="courses_info_wrapper">
@@ -150,7 +150,7 @@ echo "</div>";
 
                     <div class="single-courses">
                         <div class="courses_banner_wrapper">
-                            <div class="courses_banner"><a href="sell_form.php"><img src="C:\wamp64\www\Uni\images\sports.jpg" alt="" class="img-fluid"></a></div>
+                            <div class="courses_banner"><a href="sell_form.php"><img src="images\sports.jpg" alt="" class="img-fluid"></a></div>
                             <div class="purchase_price">
                                
                             </div>
@@ -171,7 +171,7 @@ echo "</div>";
 
                     <div class="single-courses">
                         <div class="courses_banner_wrapper">
-                            <div class="courses_banner"><a href="#"><img src="C:\wamp64\www\Uni\images\Music.jpg" alt="" class="img-fluid"></a></div>
+                            <div class="courses_banner"><a href="#"><img src="images\Music.jpg" alt="" class="img-fluid"></a></div>
                             
                         </div>
                         <div class="courses_info_wrapper">

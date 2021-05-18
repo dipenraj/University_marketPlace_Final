@@ -120,6 +120,8 @@ echo "</div>";
                     <h3 class="title">Fill out the form</h3>
                     <div class="leave_comment">
                         <div class="contact_form">
+
+
                             <form action="upload.php" method="post" enctype="multipart/form-data">
                                 <div class="row">
 
@@ -160,12 +162,19 @@ echo "</div>";
                                             </select>
                 
                                     </div> 
-                                    
+
+
+                                    <form>
                                     <div class="col-12 col-sm-12 col-md-12 form-group">
                                         <input class="form-control" type="file" name="image" required="">
-                                        <input class="form-control" name="upload" type="submit" value="upload" required="">
+                                        <button class="form-control" name="upload" type="submit" value="upload" required="">upload
+                                        </button>
+
+                                        
+
                                      
                                     </div>
+                                     </form>
                             
 
                                     <div class="col-12 col-sm-12 col-md-12 form-group">
@@ -181,13 +190,32 @@ echo "</div>";
                     </div> 
                 </div>
            </div>
-                                    <form method="post" action="testphoto.php" enctype="multipart/form-data">
-                                    <div class="col-12 col-sm-12 col-md-12 form-group">
-                                        <input class="form-control" type="file" name="image" required="">
-                                        <input class="form-control" name="upload" type="submit" value="upload" required="">
-                                     
-                                    </div>
-                                    </form>
+    
+
+
+                                            <?php
+
+                                            $con = mysqli_connect("localhost","root","","university_market_place");
+                                            $sel = "SELECT 'product_image' from product";  
+                                            $que = mysqli_query($con,$sel);
+
+                                            $output = "";
+
+                                            if (mysqli_num_rows($que) < 1){
+
+                                                $output  .= "No image uploaded ";
+
+                                            }
+
+                                            while ($row = mysqli_fetch_array($que)) {
+
+                                                $output .= "<img src='".$row['product_image']." 'style='width:400px;height:400px;'>";
+                                                # code...
+                                            }
+                                        ?>
+
+
+                                    
 
 
                 
