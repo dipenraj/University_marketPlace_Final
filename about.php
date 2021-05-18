@@ -6,7 +6,7 @@ session_start();
 
 <!doctype html>
 <html lang="en">
-
+<!-- this is just comment for the new beginning-->
 
 <head>
     <!-- Required meta tags -->
