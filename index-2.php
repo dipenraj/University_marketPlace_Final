@@ -71,7 +71,25 @@ session_start();
                         <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
                              
                         <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-                        <li class="nav-item"><a href="signout.php" class="nav-link">Sign out</a></li>
+                                                    <?php
+
+                                                    if(isset($_SESSION['username']))
+                                                    {
+
+                                                        
+                                                    echo " <li class='nav-item'><a href='signout.php' class='nav-link'>Sign out</a></li>";
+
+                                                    
+
+                                                    }
+
+                                                    else
+                                                    {
+                                                        echo "<li class='nav-item'><a href='index-3.php' class='nav-link'>Sign In</a></li>";
+                                                    }
+
+                                                    ?>
+                       
                         <li class="nav-item"><a href="sell.php" class="nav-link">Sell item</a></li>
                         <li class="nav-item"><a>
 <?php
@@ -179,6 +197,9 @@ echo "</div>";
         </div><!-- END SLIDER CONTAINER -->
     </div><!-- END SLIDER CONTAINER WRAPPER -->
 </header> <!--  End header section-->
+
+
+               
 
 
 
@@ -291,10 +312,65 @@ echo "</div>";
                 </div><!-- ends: .section-header -->
             </div>
 
+
+
+                 <?php
+
+                $con = mysqli_connect("localhost","root","","university_market_place");
+                $query = " SELECT `product_name`,`product_image` FROM product ";
+
+                $query_run = mysqli_query($con,$query);
+
+                while($row = mysqli_fetch_array($query_run))
+
+                {
+
+                ?>
+
+
+                    <table>
+                        <tr>
+                            <td>
+                                <?php echo $row['product_image'];  ?>
+                            </td>
+
+                            <td>
+                                <?php
+
+                                
+                                echo'<img src="'.$row['product_image'].'" alt="image" class="img-fluid;" style="height:400px;width:400px;">';
+
+                                ?>
+                                
+                            </td>
+
+                                
+                                
+                        </tr>
+                    </table>>
+
+                        <?php
+
+                }
+
+                ?>
+
             <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                 <div class="single-courses">
                     <div class="courses_banner_wrapper">
-                        <div class="courses_banner"><a href="#"><img src="images/courses/courses_1.jpg" alt="" class="img-fluid"></a></div>
+                        <div class="courses_banner">
+
+                            <?php 
+
+                            
+                            echo "</img>";
+                            echo "</div>";
+
+
+
+                            ?>  
+
+
                         <div class="purchase_price">
                             <a href="#" class="read_more-btn">$15</a>
                         </div>
@@ -312,7 +388,8 @@ echo "</div>";
                 </div><!-- Ends: .single courses -->
             </div><!-- Ends: . -->
 
-
+                    
+           
 
             <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                 <div class="single-courses">
