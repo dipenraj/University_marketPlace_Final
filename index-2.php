@@ -314,80 +314,78 @@ echo "</div>";
 
 
 
-                 <?php
+                
 
-                $con = mysqli_connect("localhost","root","","university_market_place");
-                $query = " SELECT `product_name`,`product_image` FROM product ";
+                   
+                    <?php
 
-                $query_run = mysqli_query($con,$query);
+                    $db = mysqli_connect("localhost","root","","university_market_place");
+                    $sql = "SELECT * FROM product";
+                    $result = mysqli_query($db,$sql);
 
-                while($row = mysqli_fetch_array($query_run))
+                    while($row= mysqli_fetch_array($result))
 
-                {
+                    {
 
-                ?>
+                       
 
+                        
 
-                    <table>
-                        <tr>
-                            <td>
-                                <?php echo $row['product_image'];  ?>
-                            </td>
-
-                            <td>
-                                <?php
-
-                                
-                                echo'<img src="'.$row['product_image'].'" alt="image" class="img-fluid;" style="height:400px;width:400px;">';
-
-                                ?>
-                                
-                            </td>
-
-                                
-                                
-                        </tr>
-                    </table>>
-
-                        <?php
-
-                }
-
-                ?>
-
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                <div class="single-courses">
-                    <div class="courses_banner_wrapper">
-                        <div class="courses_banner">
-
-                            <?php 
-
-                            
-                            echo "</img>";
-                            echo "</div>";
+                        
+                        
+                        echo "
 
 
 
-                            ?>  
 
-
-                        <div class="purchase_price">
-                            <a href="#" class="read_more-btn">$15</a>
+                        <div class='col-12 col-sm-6 col-md-6 col-lg-3'>
+                <div class='single-courses'>
+                    <div class='courses_banner_wrapper'>
+                        <div class='courses_banner'><a href='#'><img src='uploads/".$row['product_image']."' alt='' class='img-fluid'></a></div>
+                        <div class='purchase_price'>
+                            <a href='#' class='read_more-btn'> A$".$row['product_price']."</a>
                         </div>
                     </div>
-                    <div class="courses_info_wrapper">
-                        <div class="courses_title">
-                            <h3><a href="#">All the class 12 notebooks</a></h3>
-                            <div class="teachers_name">seller - <a href="#" title="">John</a></div>
+                    <div class='courses_info_wrapper'>
+                        <div class='courses_title'>
+                            <h3><a href='#'>".$row['product_name']."</a></h3>
+                            <div class='teachers_name'>Seller - ".$row['product_seller']." </div>
                         </div>
-                        <div class="courses_info">
+                        <div class='courses_info'>
                             
-                            <a href="#" class="cart_btn">buy now</a>
+                            <a href='#' class='cart_btn'>".$row['product_category']."</a>
                         </div>
                     </div>
                 </div><!-- Ends: .single courses -->
             </div><!-- Ends: . -->
 
+
+
+                        ";
+                       
+
+
+
+                    }
+
+                    ?>
+                        
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
                     
            
 
@@ -412,161 +410,10 @@ echo "</div>";
                 </div><!-- Ends: .single courses -->
             </div><!-- Ends: . -->
 
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                <div class="single-courses">
-                    <div class="courses_banner_wrapper">
-                        <div class="courses_banner"><a href="#"><img src="images/courses/courses_3.jpg" alt="" class="img-fluid"></a></div>
-                        <div class="purchase_price">
-                            <a href="#" class="read_more-btn">120$</a>
-                        </div>
-                    </div>
-                    <div class="courses_info_wrapper">
-                        <div class="courses_title">
-                            <h3><a href="#">Networking management book</a></h3>
-                            <div class="teachers_name">seller - <a href="#" title="">Preston Marshall</a></div>
-                        </div>
-                        <div class="courses_info">
-                            
-                            <a href="#" class="cart_btn">Add to Cart</a>
-                        </div>
-                    </div>
-                </div><!-- Ends: .single courses -->
-            </div><!-- Ends: . -->
-
-
-<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                <div class="single-courses">
-                    <div class="courses_banner_wrapper">
-                        <div class="courses_banner"><a href="#"><img src="images/courses/courses_2.jpg" alt="" class="img-fluid"></a></div>
-                        <div class="purchase_price">
-                            <a href="#" class="read_more-btn">$780</a>
-                        </div>
-                    </div>
-                    <div class="courses_info_wrapper">
-                        <div class="courses_title">
-                            <h3><a href="#">2015 Dell Laptop</a></h3>
-                            <div class="teachers_name">Seller - <a href="#" title="">Denise Wood</a></div>
-                        </div>
-                        <div class="courses_info">
-                            
-                            <a href="#" class="cart_btn">Add to Cart</a>
-                        </div>
-                    </div>
-                </div><!-- Ends: .single courses -->
-            </div><!-- Ends: . -->
-
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                <div class="single-courses">
-                    <div class="courses_banner_wrapper">
-                        <div class="courses_banner"><a href="#"><img src="images/courses/courses_3.jpg" alt="" class="img-fluid"></a></div>
-                        <div class="purchase_price">
-                            <a href="#" class="read_more-btn">120$</a>
-                        </div>
-                    </div>
-                    <div class="courses_info_wrapper">
-                        <div class="courses_title">
-                            <h3><a href="#">Networking management notebook 18th edition</a></h3>
-                            <div class="teachers_name">seller - <a href="#" title="">Preston Marshall</a></div>
-                        </div>
-                        <div class="courses_info">
-                            
-                            <a href="#" class="cart_btn">Add to Cart</a>
-                        </div>
-                    </div>
-                </div><!-- Ends: .single courses -->
-            </div><!-- Ends: . -->
-
-
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                <div class="single-courses">
-                    <div class="courses_banner_wrapper">
-                        <div class="courses_banner"><a href="#"><img src="images/courses/courses_2.jpg" alt="" class="img-fluid"></a></div>
-                        <div class="purchase_price">
-                            <a href="#" class="read_more-btn">$780</a>
-                        </div>
-                    </div>
-                    <div class="courses_info_wrapper">
-                        <div class="courses_title">
-                            <h3><a href="#">2015 Dell Laptop</a></h3>
-                            <div class="teachers_name">Seller - <a href="#" title="">Denise Wood</a></div>
-                        </div>
-                        <div class="courses_info">
-                            
-                            <a href="#" class="cart_btn">Add to Cart</a>
-                        </div>
-                    </div>
-                </div><!-- Ends: .single courses -->
-            </div><!-- Ends: . -->
-
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                <div class="single-courses">
-                    <div class="courses_banner_wrapper">
-                        <div class="courses_banner"><a href="#"><img src="images/courses/courses_3.jpg" alt="" class="img-fluid"></a></div>
-                        <div class="purchase_price">
-                            <a href="#" class="read_more-btn">120$</a>
-                        </div>
-                    </div>
-                    <div class="courses_info_wrapper">
-                        <div class="courses_title">
-                            <h3><a href="#">Networking management notebook 18th edition</a></h3>
-                            <div class="teachers_name">seller - <a href="#" title="">Preston Marshall</a></div>
-                        </div>
-                        <div class="courses_info">
-                            
-                            <a href="#" class="cart_btn">Add to Cart</a>
-                        </div>
-                    </div>
-                </div><!-- Ends: .single courses -->
-            </div><!-- Ends: . -->
 
 
 
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                <div class="single-courses">
-                    <div class="courses_banner_wrapper">
-                        <div class="courses_banner"><a href="#"><img src="images/courses/courses_2.jpg" alt="" class="img-fluid"></a></div>
-                        <div class="purchase_price">
-                            <a href="#" class="read_more-btn">$780</a>
-                        </div>
-                    </div>
-                    <div class="courses_info_wrapper">
-                        <div class="courses_title">
-                            <h3><a href="#">2015 Dell Laptop</a></h3>
-                            <div class="teachers_name">Seller - <a href="#" title="">Denise Wood</a></div>
-                        </div>
-                        <div class="courses_info">
-                            
-                            <a href="#" class="cart_btn">Add to Cart</a>
-                        </div>
-                    </div>
-                </div><!-- Ends: .single courses -->
-            </div><!-- Ends: . -->
-
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                <div class="single-courses">
-                    <div class="courses_banner_wrapper">
-                        <div class="courses_banner"><a href="#"><img src="images/courses/courses_3.jpg" alt="" class="img-fluid"></a></div>
-                        <div class="purchase_price">
-                            <a href="#" class="read_more-btn">120$</a>
-                        </div>
-                    </div>
-                    <div class="courses_info_wrapper">
-                        <div class="courses_title">
-                            <h3><a href="#">Networking management notebook 18th edition</a></h3>
-                            <div class="teachers_name">seller - <a href="#" title="">Preston Marshall</a></div>
-                        </div>
-                        <div class="courses_info">
-                            
-                            <a href="#" class="cart_btn">Add to Cart</a>
-                        </div>
-                    </div>
-                </div><!-- Ends: .single courses -->
-            </div><!-- Ends: . -->
-            
-            </div><!-- Ends: . -->                           
-        </div>
-
-    </div>
+          
 </section><!-- ./ End Courses Area section -->
 
 

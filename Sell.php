@@ -60,7 +60,24 @@ session_start();
                         
                              
                         <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-                        <li class="nav-item"><a href="signout.php" class="nav-link">Sign out</a></li>
+                        <?php
+
+                                                    if(isset($_SESSION['username']))
+                                                    {
+
+                                                        
+                                                    echo " <li class='nav-item'><a href='signout.php' class='nav-link'>Sign out</a></li>";
+
+                                                    
+
+                                                    }
+
+                                                    else
+                                                    {
+                                                        echo "<li class='nav-item'><a href='index-3.php' class='nav-link'>Sign In</a></li>";
+                                                    }
+
+                                                    ?>
                         <li class="nav-item"><a href="sell.php" class="nav-link active">Sell item</a></li>
                         <li class="nav-item"><a>
 <?php

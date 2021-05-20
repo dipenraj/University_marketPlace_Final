@@ -1,49 +1,52 @@
- <?php
+<?php
 
-                $con = mysqli_connect("localhost","root","","university_market_place");
-                $query = " SELECT * FROM product order by ID ";
+                    $db = mysqli_connect("localhost","root","","university_market_place");
+                    $sql = "SELECT * FROM product";
+                    $result = mysqli_query($db,$sql);
 
-                $query_run = mysqli_query($con,$query);
+                    while($row= mysqli_fetch_array($result))
 
-                while($row = mysqli_fetch_array($query_run))
+                    {
 
-                {
+                       
 
-                ?>
+                        
 
-                    <!DOCTYPE html>
-                    <html>
-                    <head>
-                        <title></title>
-                    </head>
-                    <body>
-                    <table>
-                        <tr>
-                            <td>
-                               
-                            </td>
+                        
+                        
+                        echo "
 
-                            <td>
-                                <?php
 
-                                
-                                echo'<img src="'.$row['product_image'].'" alt="image" style="height:400px;width:400px;">';
 
-                                ?>
-                                
-                            </td>
 
-                                
-                                
-                        </tr>
-                    </table>
-                    </body>
-                    </html>
+                        <div class='col-12 col-sm-6 col-md-6 col-lg-3'>
+                <div class='single-courses'>
+                    <div class='courses_banner_wrapper'>
+                        <div class='courses_banner'><a href='#'><img src='uploads/".$row['product_image']."' alt='' class='img-fluid'></a></div>
+                        <div class='purchase_price'>
+                            <a href='#' class='read_more-btn'> A$".$row['product_price']."</a>
+                        </div>
+                    </div>
+                    <div class='courses_info_wrapper'>
+                        <div class='courses_title'>
+                            <h3><a href='#'>".$row['product_name']."</a></h3>
+                            <div class='teachers_name'>Seller - ".$row['product_seller']." </div>
+                        </div>
+                        <div class='courses_info'>
+                            
+                            <a href='#' class='cart_btn'>".$row['product_category']."</a>
+                        </div>
+                    </div>
+                </div><!-- Ends: .single courses -->
+            </div><!-- Ends: . -->
 
-                    
 
-                        <?php
 
-                }
+                        ";
+                       
 
-                ?>
+
+
+                    }
+
+                    ?>
