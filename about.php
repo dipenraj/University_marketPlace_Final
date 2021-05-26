@@ -15,7 +15,7 @@ session_start();
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="Ecology Theme">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduwise - Education HTML5 Template</title>
+    <title>About Us</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <!-- Goole Font -->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700" rel="stylesheet">
@@ -57,7 +57,7 @@ session_start();
     <div class="edu_nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light bg-faded">
-                <a class="navbar-brand" href="index-2.html"><img src="images/logo.png" alt="logo"></a>
+                <a class="navbar-brand" href="index-2.php"><img src="images/logo.png" alt="logo"></a>
                 <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav nav lavalamp ml-auto menu">
                         <li class="nav-item"><a href="index-2.php" class="nav-link">Home</a>
@@ -115,11 +115,8 @@ echo "</div>";
             <div class="row">        
                  <div class="col-sm-12 col-md-8 col-lg-8">
                     <div class="intro_text">
-                        <h1>About Page</h1>
-                        <div class="pages_links">
-                            <a href="#" title="">Home</a>
-                            <a href="#" title="" class="active">About Page</a>
-                        </div>
+                        <h1>About Us</h1>
+                        
                     </div>
                 </div>              
 
@@ -130,139 +127,14 @@ echo "</div>";
 
 
 
-<section class="login_signup_option">
-    <div class="l-modal is-hidden--off-flow js-modal-shopify">
-        <div class="l-modal__shadow js-modal-hide"></div>
-        <div class="login_popup login_modal_body">
-            <div class="Popup_title d-flex justify-content-between">
-                <h2 class="hidden">&nbsp;</h2>
-                <!-- Nav tabs -->
-                <div class="row">
-                    <div class="col-12 col-lg-12 col-md-12 col-lg-12 login_option_btn">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#login" role="tab">Login</a></li>
-                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#panel2" role="tab">Register</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-lg-12 col-md-12 col-lg-12">
-                        <!-- Tab panels -->
-                        <div class="tab-content card">
-                            <!--Login-->
-                            <div class="tab-pane fade in show active" id="login" role="tabpanel">
-                                <form action="#">
-                                    <div class="row">
-                                        <div class="col-12 col-lg-12 col-md-12 col-lg-12">
-                                            <div class="form-group">
-                                                <label class="control-label">Email</label>
-                                                <input type="email" class="form-control" placeholder="Username">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-12 col-md-12 col-lg-12">
-                                            <div class="form-group">
-                                                <label class="control-label">Password</label>
-                                                <input type="password" class="form-control" placeholder="Password">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12 col-lg-12 col-md-12 col-lg-12 d-flex justify-content-between login_option">
-												<a href="forgot-password.html" title="" class="forget_pass">Forget Password ?</a>
-                                            <button type="submit" class="btn btn-default login_btn">Login</button>
-                                        </div> 
-                                        <div class="col-12 col-lg-12 col-md-12 col-lg-12">
-                                            <div class="social_login">
-                                                <div class="social_items">
-                                                    <button class="google_login google">Login Google</button>
-                                                    <button class="google_login facebook">Login Facebook</button>
-                                                    <button class="google_login twitter">Login Twitter</button>
-                                                    <button class="google_login linkdin">Login Linkdin</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <!--/.Panel 1-->
-                            <!--Panel 2-->
-                            <div class="tab-pane fade" id="panel2" role="tabpanel">
-                                <form action="#" class="register">
-                                    <div class="row">
-                                        <div class="col-12 col-lg-12 col-md-12 col-lg-12">
-                                            <div class="form-group">
-                                                <label  class="control-label">Name</label>
-                                                <input type="text" class="form-control" placeholder="Username">
-                                            </div>
-                                        </div>                                        
-                                        <div class="col-12 col-lg-12 col-md-12 col-lg-12">
-                                            <div class="form-group">
-                                                <label  class="control-label">Email</label>
-                                                <input type="email" class="form-control" placeholder="Email">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-12 col-md-12 col-lg-12">
-                                            <div class="form-group">
-                                                <label  class="control-label">Password</label>
-                                                <input type="password" class="form-control" placeholder="Password">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12 col-lg-12 col-md-12 col-lg-12 d-flex justify-content-between login_option">
-                                            <button type="submit" class="btn btn-default login_btn">Register</button>
-                                        </div> 
-                                    </div>
-                                </form>
-                            </div><!--/.Panel 2-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>  <!-- End Login Signup Option -->
 
-
-
-
-<section class="about_us">
-    <div class="container">            
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-7 col-lg-7">
-                <div class="about_title">
-                    <span>About Us</span>
-                    <h2></h2>
-                 </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-5 col-lg-5 p-0">
-                <div class="banner_about">
-                    <img src="" alt="" class="img-fluid">
-                 </div>
-            </div>
-        </div>        
-        <div class="row about_content_wrapper">
-            <div class="col-12 col-sm-12 col-md-5 col-lg-5 p-0">
-                <div class="about_banner_down">
-                    <img src="" alt="" class="img-fluid">
-                 </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-7 col-lg-7">
-                <div class="about_content">
-                    
-                 </div>
-            </div>
-        </div>
-    </div>    
-</section>
-
-
-<!--========={ Popular Courses }========-->
-<section class="unlimited_possibilities" id="about_unlimited_possibilities">
+<section class="unlimited_possibilities">
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="sub_title">
-                    <h2>Unlimited Possibilities</h2>
-                      
+                    <h2>Say Hello to your new favourite place</h2>
+                    <p>Register now and join University students on the University marketplace for all the second hand stuff</p>  
                 </div><!-- ends: .section-header -->
             </div>
             <div class="col-12 col-sm-6 col-md-4 col-lg-4">
@@ -271,8 +143,8 @@ echo "</div>";
                         <i class="flaticon-student"></i>
                     </div>
                     <div class="blog_title">
-                        <h3><a href="#" title="">Learn anywhere</a></h3> 
-                        <p></p>                    
+                        <h3><a href="#" title="">Make deals within your campus</a></h3> 
+                        <p>Now you no need to go outside for your campus needs, Just simply register and get the best of your college life needs</p>                    
                     </div>   
                 </div>
             </div>
@@ -282,8 +154,8 @@ echo "</div>";
                         <i class="flaticon-university"></i>
                     </div>
                     <div class="blog_title">
-                        <h3><a href="#" title="">Our Mission</a></h3> 
-                        <p></p>                    
+                        <h3><a href="#" title="">Trusted purchase</a></h3> 
+                        <p>Thats an Awesome Part! You are dealing with your college mate or anyone whom you know.</p>                    
                     </div>   
                 </div>
             </div>
@@ -293,21 +165,19 @@ echo "</div>";
                         <i class="flaticon-diploma"></i>
                     </div>
                     <div class="blog_title">
-                        <h3><a href="#" title="">Diploma Course</a></h3> 
-                        <p></p>
+                        <h3><a href="#" title="">Multiple Producsts, One Destination</a></h3> 
+                        <p>You can sell books, Musical Intruments, Sports equipments anytime</p>
                     </div>   
                 </div>
-            </div>            
-            
-            
-                         
+            </div>             
         </div>
     </div>
-</section><!-- End Popular Courses -->
+</section><!-- End Unlimited Possibilities -->
 
 
-<!--========={ Register Area }========-->
-<!-- ./ End Register Area section -->
+
+
+
 
 
 
@@ -320,7 +190,7 @@ echo "</div>";
                     <p></p>  
                 </div><!-- ends: .section-header -->
             </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-6">
                  <div class="single_item single_item_first">
                     <div class="blog-img">
                         <a href="#" title=""><img src="images/blog/blog_.jpg" alt="" class="img-fluid"></a>
@@ -332,19 +202,19 @@ echo "</div>";
                     </div>   
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-6">
                 <div class="single_item single_item_center">
                      <div class="blog-img">
                         <a href="#" title=""><img src="images/blog/blog_.jpg" alt="" class="img-fluid"></a>
                     </div>
                     <div class="blog_title">
-                        <span>Harsh Pandav</span>  
-                        <h3><a href="#" title="">Front-end developer</a></h3> 
+                        <span>Front-end developer</span>  
+                        <h3><a href="#" title="">Harsh Pandav</a></h3> 
                                       
                     </div>   
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-6">
                <div class="single_item single_item_last">
                      <div class="blog-img">
                         <a href="#" title=""><img src="images/blog/blog_.jpg" alt="" class="img-fluid"></a>
@@ -356,7 +226,7 @@ echo "</div>";
                     </div>   
                 </div>
             </div>
-             <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+             <div class="col-12 col-sm-6 col-md-4 col-lg-6">
                <div class="single_item single_item_last">
                      <div class="blog-img">
                         <a href="#" title=""><img src="images/blog/blog_.jpg" alt="" class="img-fluid"></a>
@@ -373,124 +243,7 @@ echo "</div>";
 </section><!-- End Blog  -->
 
 
-<!--========={ Our Instructiors }========-->
-<section class="our_instructors" id="about_our_instructors">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="sub_title">
-                    <h2>Meet The Developers</h2>
-                    <p></p>  
-                </div><!-- ends: .section-header -->
-            </div>
-            <div class="single-wrappe col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="team-single-item">
-                    <figure>
-                        <div class="member-img">
-                            <div class="teachars_pro">
-                                <img src="" alt="member img" class="img-fluid">
-                            </div>
-                        </div>
-                        <figcaption>
-                            <div class="member-name">
-                                <h4><a href="#" title=""></a></h4>
-                                <span></span>
-                            </div>                            
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            
-            <div class="single-wrapper col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="team-single-item">
-                    <figure>
-                        <div class="member-img">
-                            <div class="teachars_pro">
-                                <img src="" alt="member img" class="img-fluid">
-                            </div>
-                        </div>
-                        <figcaption>
-                            <div class="member-name">
-                                <h4><a href="#" title=""></a></h4>
-                                <span></span>
-                            </div>                            
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            
-            <div class="single-wrapper  col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="team-single-item ">
-                    <figure>
-                        <div class="member-img">
-                            <div class="teachars_pro">
-                                <img src="" alt="member img" class="img-fluid">
-                            </div>
-                        </div>
-                        <figcaption>
-                            <div class="member-name">
-                                <h4><a href="#" title=""></a></h4>
-                                <span></span>
-                            </div>                            
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            
-            <div class="single-wrapper col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="team-single-item">
-                    <figure>
-                        <div class="member-img">
-                            <div class="teachars_pro">
-                                <img src="" alt="member img" class="img-fluid">
-                            </div>
-                        </div>
-                        <figcaption>
-                            <div class="member-name">
-                                <h4><a href="#" title=""></a></h4>
-                                <span></span>
-                            </div>                            
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>                    
-            <div class="single-wrapper col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="team-single-item">
-                    <figure>
-                        <div class="member-img">
-                            <div class="teachars_pro">
-                                <img src="" alt="member img" class="img-fluid">
-                            </div>
-                        </div>
-                        <figcaption>
-                            <div class="member-name">
-                                <h4><a href="#" title=""></a></h4>
-                                <span></span>
-                            </div>                            
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>                    
-            <div class="single-wrapper col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="team-single-item">
-                    <figure>
-                        <div class="member-img">
-                            <div class="teachars_pro">
-                                <img src="" alt="member img" class="img-fluid">
-                            </div>
-                        </div>
-                        <figcaption>
-                            <div class="member-name">
-                                <h4><a href="#" title=""></a></h4>
-                                <span></span>
-                            </div>                            
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>                    
-        </div>
-    </div>
-</section><!-- ./ End Our Instructiors -->
+    
 
 
 <!-- End Testimonial -->
@@ -531,17 +284,24 @@ echo "</div>";
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-2">
-                    <div class="footer_single_col">
-                        <h3></h3>
-                                                
-                    </div>
+                    
                 </div>
+                
+                
+
                 <div class="col-12 col-md-6 col-lg-2">
-                    <div class="footer_single_col information">
-                        <h3></h3>
-                        
+                    <div class="footer_single_col">
+                        <h3>Useful Links</h3>
+                        <ul class="quick_inf0">
+                            <li><a href="about.php">About Us</a></li>
+                            <li><a href="contact.php">Contact Us</a></li>
+                            <li><a href="Sell.php">Sell an Item</a></li>
+                            <li><a href="index-3.php">Back to Main Page</a></li>
+                            
+                        </ul>                         
                     </div>
                 </div>
+                        
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="footer_single_col contact">
                         <h3>Contact Us</h3>
@@ -550,16 +310,16 @@ echo "</div>";
                             <span>+000 124 325</span> 
                             <span class="email">info@yourdomain.com</span>
                         </div>
-                        <ul class="social_items d-flex list-unstyled">
-                            <li><a href="#"><i class="fab fa-facebook-f fb-icon"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter twitt-icon"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in link-icon"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram ins-icon"></i></a></li>
-                        </ul>
+                        
                     </div>
                 </div>
                  <div class="col-12 col-md-12 col-lg-12">
-                    
+                    <div class="">
+                        <a></a>
+
+                        <br>
+                        <br>
+                    </div>
                  </div>
             </div>
         </div>
@@ -567,7 +327,6 @@ echo "</div>";
     <div class="shapes_bg">
         <img src="images/shapes/waves.png" alt="" class="shape_3">        
     </div>    
-
 </footer><!-- End Footer -->
 
 <section id="scroll-top" class="scroll-top">

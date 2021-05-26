@@ -62,7 +62,7 @@
     <div class="edu_nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light bg-faded">
-                <a class="navbar-brand" href="index-2.html"><img src="images/logo2.png" height="100" width="100"></a>
+                <a class="navbar-brand" href="index-3.php"><img src="images/logo2.png" height="100" width="100"></a>
                 
             </nav><!-- END NAVBAR -->
         </div> 
@@ -311,7 +311,7 @@
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="sub_title">
                     <h2>Say Hello to your new favourite place</h2>
-                    <p>register now and join University students on the University marketplace for all the second hand stuff</p>  
+                    <p>Register now and join University students on the University marketplace for all the second hand stuff</p>  
                 </div><!-- ends: .section-header -->
             </div>
             <div class="col-12 col-sm-6 col-md-4 col-lg-4">
@@ -320,8 +320,8 @@
                         <i class="flaticon-student"></i>
                     </div>
                     <div class="blog_title">
-                        <h3><a href="#" title="">Next Scheduled</a></h3> 
-                        <p>Lorem ipsum dolor consectetur sed do tempor incididunt ut laboris ut aliquip ex commodo nt ut laboris ut aliquip ex commodo conquat.</p>                    
+                        <h3><a href="#" title="">Make deals within your campus</a></h3> 
+                        <p>Now you no need to go outside for your campus needs, Just simply register and get the best of your college life needs</p>                    
                     </div>   
                 </div>
             </div>
@@ -331,8 +331,8 @@
                         <i class="flaticon-university"></i>
                     </div>
                     <div class="blog_title">
-                        <h3><a href="#" title="">Online Courees</a></h3> 
-                        <p>Lorem ipsum dolor consectetur sed do tempor incididunt ut laboris ut aliquip ex commodo nt ut laboris ut aliquip ex commodo conquat.</p>                    
+                        <h3><a href="#" title="">Trusted purchase</a></h3> 
+                        <p>Thats an Awesome Part! You are dealing with your college mate or anyone whom you know.</p>                    
                     </div>   
                 </div>
             </div>
@@ -342,8 +342,8 @@
                         <i class="flaticon-diploma"></i>
                     </div>
                     <div class="blog_title">
-                        <h3><a href="#" title="">Education Equip</a></h3> 
-                        <p>Lorem ipsum dolor consectetur sed do tempor incididunt ut laboris ut aliquip ex commodo nt ut laboris ut aliquip ex commodo conquat.</p>
+                        <h3><a href="#" title="">Multiple Producsts, One Destination</a></h3> 
+                        <p>You can sell books, Musical Intruments, Sports equipments anytime</p>
                     </div>   
                 </div>
             </div>             
@@ -376,69 +376,61 @@
 </section><!-- End Team Group -->
 
 
-
 <!-- Footer -->  
-<footer class="footer_2">
+<footer class="footer_3">
     <div class="container">
+          
         <div class="footer_top">
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="footer_single_col footer_intro">
-                        <img src="images/logo2.png" alt="" class="f_logo" width="100" >
-                        <p>Ante amet vitae vulputate odio nulla vel pretium pulvinar aenean. Rhoncus eget adipiscing etiam arcu. Ultricies justo ipsum nec amet.</p>
+                        <img src="images/logo2.png" alt="" class="f_logo">
+                        <p>Say hello to your new favourite thing. Buy and sell University second hand stuffs from the UNi students. Whenever and whereever.</p>
                     </div>
                 </div>
+                <div class="col-12 col-md-6 col-lg-2">
+                    
+                </div>
+                
+                
+
                 <div class="col-12 col-md-6 col-lg-2">
                     <div class="footer_single_col">
                         <h3>Useful Links</h3>
-                        <ul class="location_info quick_inf0">
-                            <li><a href="#">Leadereship</a></li>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Diversity</a></li>
-                            <li><a href="#">Jobs</a></li>
-                            <li><a href="#">Press</a></li>
+                        <ul class="quick_inf0">
+                            <li><a href="about.php">About Us</a></li>
+                            <li><a href="contact.php">Contact Us</a></li>
+                            <li><a href="Sell.php">Sell an Item</a></li>
+                            <li><a href="index-3.php">Back to Main Page</a></li>
+                            
                         </ul>                         
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-2">
-                    <div class="footer_single_col information">
-                        <h3>information</h3>
-                        <ul class="quick_inf0">
-                            <li><a href="#">Leadereship</a></li>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Diversity</a></li>
-                            <li><a href="#">Jobs</a></li>
-                            <li><a href="#">Press</a></li>
-                        </ul>
-                    </div>
-                </div>
+                        
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="footer_single_col contact">
                         <h3>Contact Us</h3>
-                        <p>Ante amet vitae vulputate odio nulla vel pretium aenean.</p>
+                        <p>Feel free to get in touch us via Phone or send us a message.</p>
                         <div class="contact_info">
                             <span>+000 124 325</span> 
                             <span class="email">info@yourdomain.com</span>
                         </div>
-                        <ul class="social_items d-flex list-unstyled">
-                            <li><a href="#"><i class="fab fa-facebook-f fb-icon"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter twitt-icon"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in link-icon"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram ins-icon"></i></a></li>
-                        </ul>
+                        
                     </div>
                 </div>
                  <div class="col-12 col-md-12 col-lg-12">
-                    <div class="copyright">
-                        <a target="_blank" href="https://www.templateshub.net"></a>
+                    <div class="">
+                        <a></a>
+
+                        <br>
+                        <br>
                     </div>
                  </div>
             </div>
         </div>
     </div>
     <div class="shapes_bg">
-        <img src="images/shapes/testimonial_2_shpe_1.png" alt="" class="shape_3">        
-        <img src="images/shapes/footer_2.png" alt="" class="shape_1">
+        <img src="images/shapes/waves.png" alt="" class="shape_3">        
     </div>    
 </footer><!-- End Footer -->
 

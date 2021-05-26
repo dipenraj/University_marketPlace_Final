@@ -33,6 +33,7 @@ session_start();
     <link rel="stylesheet" href="css/demo.css">
     
 </head>
+<title>Sell page</title>
 <body>
     
 
@@ -50,7 +51,7 @@ session_start();
     <div class="edu_nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light bg-faded">
-                <a class="navbar-brand" href="index-2.html"><img src="images/logo.png" alt="logo"></a>
+                <a class="navbar-brand" href="index-2.php"><img src="images/logo.png" alt="logo"></a>
                 <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav nav lavalamp ml-auto menu">
                         <li class="nav-item"><a href="index-2.php" class="nav-link">Home</a>
@@ -98,18 +99,7 @@ echo "</div>";
 ?></a></li>
                     </ul>
                 </div>
-                <div class="mr-auto search_area ">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"><i class="search_btn flaticon-magnifier"></i>
-                            <div id="search">
-                                <button type="button" class="close">×</button>
-                                 <form>
-                                     <input type="search" value="" placeholder="Search here...."  required/>
-                                 </form>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                
             </nav><!-- END NAVBAR -->
         </div> 
     </div>
@@ -119,7 +109,26 @@ echo "</div>";
             <div class="row">        
                  <div class="col-sm-12 col-md-8 col-lg-8">
                     <div class="intro_text">
-                        <h1>Sell an Item !</h1>
+                        <h1>
+
+                        <?php
+
+                                                    if(isset($_SESSION['username']))
+                                                    {
+
+                                                        
+                                                    echo "Sell an Item !";
+
+                                                    
+
+                                                    }
+
+                                                    else
+                                                    {
+                                                        echo "Sell an Item ! - Login to Continue";
+                                                    }
+
+                                                    ?></h1>
                        
                 </div>              
 
@@ -228,17 +237,24 @@ echo "</div>";
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-2">
-                    <div class="footer_single_col">
-                        <h3></h3>
-                                                
-                    </div>
+                    
                 </div>
+                
+                
+
                 <div class="col-12 col-md-6 col-lg-2">
-                    <div class="footer_single_col information">
-                        <h3></h3>
-                        
+                    <div class="footer_single_col">
+                        <h3>Useful Links</h3>
+                        <ul class="quick_inf0">
+                            <li><a href="about.php">About Us</a></li>
+                            <li><a href="contact.php">Contact Us</a></li>
+                            <li><a href="Sell.php">Sell an Item</a></li>
+                            <li><a href="index-3.php">Back to Main Page</a></li>
+                            
+                        </ul>                         
                     </div>
                 </div>
+                        
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="footer_single_col contact">
                         <h3>Contact Us</h3>
@@ -247,16 +263,16 @@ echo "</div>";
                             <span>+000 124 325</span> 
                             <span class="email">info@yourdomain.com</span>
                         </div>
-                        <ul class="social_items d-flex list-unstyled">
-                            <li><a href="#"><i class="fab fa-facebook-f fb-icon"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter twitt-icon"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in link-icon"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram ins-icon"></i></a></li>
-                        </ul>
+                        
                     </div>
                 </div>
                  <div class="col-12 col-md-12 col-lg-12">
-                    
+                    <div class="">
+                        <a></a>
+
+                        <br>
+                        <br>
+                    </div>
                  </div>
             </div>
         </div>
@@ -264,7 +280,6 @@ echo "</div>";
     <div class="shapes_bg">
         <img src="images/shapes/waves.png" alt="" class="shape_3">        
     </div>    
-
 </footer><!-- End Footer -->
 <section id="scroll-top" class="scroll-top">
     <h2 class="disabled">Scroll to top</h2>

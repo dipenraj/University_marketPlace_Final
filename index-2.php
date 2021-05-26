@@ -62,7 +62,7 @@ session_start();
     <div class="edu_nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light bg-faded">
-                <a class="navbar-brand" href="index-2.html"><img src="images/logo.png" alt="logo"></a>
+                <a class="navbar-brand" href="index-2.php"><img src="images/logo.png" alt="logo"></a>
                 <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav nav lavalamp ml-auto menu">
                         <li class="nav-item"><a href="index-3.php" class="nav-link active">Home</a>
@@ -325,9 +325,7 @@ echo "</div>";
 
                     while($row= mysqli_fetch_array($result))
 
-                    {
-
-                       
+                    {       
 
                         
 
@@ -337,8 +335,8 @@ echo "</div>";
 
 
 
-
-                        <div class='col-12 col-sm-6 col-md-6 col-lg-3'>
+ <div class='col-12 col-sm-6 col-md-6 col-lg-3'>
+ <form method='post' action='buy.php' enctype='multipart/form-data'>
                 <div class='single-courses'>
                     <div class='courses_banner_wrapper'>
                         <div class='courses_banner'><a href='#'><img src='uploads/".$row['product_image']."' alt='' class='img-fluid'></a></div>
@@ -350,14 +348,31 @@ echo "</div>";
                         <div class='courses_title'>
                             <h3><a href='#'>".$row['product_name']."</a></h3>
                             <div class='teachers_name'>Seller - ".$row['product_seller']." </div>
+                            <div class='teachers_name'>Category - ".$row['product_category']." </div>
+                            <input type='hidden' name='hidden_name' value=".$row['product_name'].">
+                            <input type='hidden' name='hidden_image' value=".$row['product_image'].">
+                            <input type='hidden' name='hidden_id' value=".$row['product_id'].">
                         </div>
+
                         <div class='courses_info'>
                             
-                            <a href='#' class='cart_btn'>".$row['product_category']."</a>
+                            <div class='col-12 col-sm-12 col-md-12 submit-btn'>
+                                        <button type='submit' name='buy' class='cart_btn'>Buy</button>
+
+                            </div>
+
                         </div>
                     </div>
                 </div><!-- Ends: .single courses -->
+                 </form>
             </div><!-- Ends: . -->
+                        
+
+
+
+
+
+       
 
 
 
@@ -445,29 +460,24 @@ echo "</div>";
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-2">
+                    
+                </div>
+                
+                
+
+                <div class="col-12 col-md-6 col-lg-2">
                     <div class="footer_single_col">
                         <h3>Useful Links</h3>
                         <ul class="quick_inf0">
-                            <li><a href="#">Leadereship</a></li>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Diversity</a></li>
-                            <li><a href="#">Jobs</a></li>
-                            <li><a href="#">Press</a></li>
+                            <li><a href="about.php">About Us</a></li>
+                            <li><a href="contact.php">Contact Us</a></li>
+                            <li><a href="Sell.php">Sell an Item</a></li>
+                            <li><a href="index-3.php">Back to Main Page</a></li>
+                            
                         </ul>                         
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-2">
-                    <div class="footer_single_col information">
-                        <h3>information</h3>
-                        <ul class="quick_inf0">
-                            <li><a href="#">Leadereship</a></li>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Diversity</a></li>
-                            <li><a href="#">Jobs</a></li>
-                            <li><a href="#">Press</a></li>
-                        </ul>
-                    </div>
-                </div>
+                        
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="footer_single_col contact">
                         <h3>Contact Us</h3>
@@ -476,17 +486,19 @@ echo "</div>";
                             <span>+000 124 325</span> 
                             <span class="email">info@yourdomain.com</span>
                         </div>
-                        <ul class="social_items d-flex list-unstyled">
-                            <li><a href="#"><i class="fab fa-facebook-f fb-icon"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter twitt-icon"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in link-icon"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram ins-icon"></i></a></li>
-                        </ul>
+                        
                     </div>
                 </div>
                  <div class="col-12 col-md-12 col-lg-12">
                     <div class="">
-                        <a></a>>
+                        <a></a>
+
+
+
+
+
+                        <br>
+                        <br>
                     </div>
                  </div>
             </div>

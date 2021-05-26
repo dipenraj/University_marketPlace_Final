@@ -37,7 +37,7 @@ session_start();
     <link rel="stylesheet" href="css/demo.css">
     
 </head>
-<title>Sell page</title>
+<title>Buy page</title>
 <body>
     
 
@@ -117,7 +117,7 @@ echo "</div>";
                                                     {
 
                                                         
-                                                    echo "Sell an Item !";
+                                                    echo "Buy this Item !";
 
                                                     
 
@@ -125,7 +125,7 @@ echo "</div>";
 
                                                     else
                                                     {
-                                                        echo "Sell an Item ! -
+                                                        echo "Buy this Item ! -
                                                          Login to Continue";
                                                     }
 
@@ -141,7 +141,125 @@ echo "</div>";
 </header> <!-- End nav -->
 
 
+<section class="popular_courses">
+    <div class="container"> 
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                
+            </div>
 
+
+
+                
+
+                   
+                    <?php                            
+
+                    $db = mysqli_connect("localhost","root","","university_market_place");
+
+                    if (isset($_POST["buy"]))
+                                        {
+                                         
+                    $id = $_POST['hidden_id'];
+
+                    
+
+                     $sql = "SELECT * FROM product where product_id='$id'";
+                     $mysqli_result = mysqli_query($db,$sql);
+
+                    while($row= mysqli_fetch_array($mysqli_result))
+                            
+                            {
+
+
+                                echo "
+
+
+
+ <div class='col-12 col-sm-6 col-md-6 col-lg-3'>
+ <form method='post' action='test.php' enctype='multipart/form-data'>
+                <div class='single-courses'>
+                    <div class='courses_banner_wrapper'>
+                        <div class='courses_banner'><a href='#'><img src='uploads/".$row['product_image']."' alt='' class='img-fluid'></a></div>
+                        <div class='purchase_price'>
+                            <a href='#' class='read_more-btn'> A$".$row['product_price']."</a>
+                        </div>
+                    </div>
+                    <div class='courses_info_wrapper'>
+                        <div class='courses_title'>
+                            <h3><a href='#'>".$row['product_name']."</a></h3>
+                            <div class='teachers_name'>Seller - ".$row['product_seller']." </div>
+                            <div class='teachers_name'>Category - ".$row['product_category']." </div>
+                            <input type='hidden' name='hidden_name' value=".$row['product_name'].">
+                            <input type='hidden' name='hidden_image' value=".$row['product_image'].">
+                            <input type='hidden' name='hidden_id' value=".$row['product_id'].">
+                        </div>
+
+                        <div class='courses_info'>
+                            
+                            <div class='col-12 col-sm-12 col-md-12 submit-btn'>
+                                        <button type='submit' name='buy' class='cart_btn'>Buy</button>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div><!-- Ends: .single courses -->
+                 </form>
+            </div><!-- Ends: . -->
+                        
+
+
+
+
+
+       
+
+
+
+                        ";
+                            }
+
+
+
+
+                   
+                    
+           }
+
+                    ?>
+                        
+                        </div>
+                    </div>
+                </section>
+
+<section class="events-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-15">
+                <div class="col-sm-12 events_full_box">
+                <div class="events_single">
+                    <div class="event_banner">
+                        <a href="#"><img src="images/events/event_3.jpg" alt="" class="img-fluid"></a>
+                    </div>
+                    <div class="event_info">
+                        <h3><a href="#" title="">Robotic Process Automation Tech<br> Primer</a></h3>
+                        <div class="events_time">
+                            <span class="time"><i class="flaticon-clock-circular-outline"></i>8.00 Am - 5.00 Pm</span>
+                            <span><i class="fas fa-map-marker-alt"></i>Hall - A | Broklyn Audiitorium</span>
+                        </div>
+                         <p>Lorem ipsum dolor sit amet mollis dapibus arcur donec viverra to phasellus<br> eget. Etiam maecenas vel vici quis dictum rutrum nec nisi et. Ac pena<br> tibus aenean laoreet.</p>
+                        <div class="event_dete">
+                            <span class="date">20</span>
+                            <span>Jan</span>
+                        </div>
+                    </div>
+                </div>  
+            </div> 
+        </div>
+        </div>
+    </div>
+</section>
 
 
                                                     

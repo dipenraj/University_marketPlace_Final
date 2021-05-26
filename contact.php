@@ -17,7 +17,7 @@ session_start();
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="Ecology Theme">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Univerisity</title>
+    <title>Contact us</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <!-- Goole Font -->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700" rel="stylesheet">
@@ -70,7 +70,7 @@ session_start();
     <div class="edu_nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light bg-faded">
-                <a class="navbar-brand" href="index-2.html"><img src="images/logo.png" alt="logo"></a>
+                <a class="navbar-brand" href="index-2.php"><img src="images/logo.png" alt="logo"></a>
                 <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav nav lavalamp ml-auto menu">
                         <li class="nav-item"><a href="index-2.php" class="nav-link">Home</a>
@@ -232,21 +232,21 @@ echo "</div>";
                     <div class="event_location_info">                  
                         <ul class="list-unstyled">
                             <li>
-                                <h4 class="info_title">Address : </h4>
+                                <h4 class="info_title">Address : 104 Franklin St, Melbourne VIC 3000</h4>
                                 <ul class="list-unstyled">
                                     <li></li>
                                     <li></li>
                                 </ul>
                             </li>
                             <li>
-                                <h4 class="info_title">Phone Numbers :</h4>
+                                <h4 class="info_title">Phone Numbers : (03) 9631 9150</h4>
                                 <ul class="list-unstyled">
                                     <li></li>
                                     <li></li>
                                 </ul>
                             </li>
                             <li>
-                                <h4 class="info_title">Our E-mails :</h4>
+                                <h4 class="info_title">Our E-mails : Info@Universitymarketplace.com.au</h4>
                                 <ul class="list-unstyled">
                                     <li></li>                                    
                                 </ul>
@@ -261,19 +261,19 @@ echo "</div>";
                     <h3 class="title">Get In Touch</h3>
                     <div class="leave_comment">
                         <div class="contact_form">
-                            <form action="#">
+                            <form action="checkcontact.php" method="post" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-12 col-sm-12 col-md-6 form-group">
-                                       <input type="text" class="form-control" id="name"  placeholder="Your Name">
+                                       <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required="">
                                     </div>
                                     <div class="col-12 col-sm-12 col-md-6 form-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Your E-mail">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your E-mail" required="">
                                     </div>                                    
                                     <div class="col-12 col-sm-12 col-md-12 form-group">
-                                        <input type="text" class="form-control" id="subject" placeholder="Pick Your Subject">
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Pick Your Subject" required="">
                                     </div>
                                     <div class="col-12 col-sm-12 col-md-12 form-group">
-                                        <textarea class="form-control" id="comment" placeholder="Your Comment Wite Here ..."></textarea>
+                                        <textarea class="form-control" id="comment" name="comment"  placeholder="Your Comment Wite Here ..." required=""></textarea>
                                     </div>
                                      <div class="col-12 col-sm-12 col-md-12 submit-btn">
                                         <button type="submit" class="text-center">Send Massage</button>
@@ -295,7 +295,6 @@ echo "</div>";
  <!-- Ends: Google Map Area -->  
 
 
-
 <!-- Footer -->  
 <footer class="footer_3">
     <div class="container">
@@ -309,17 +308,24 @@ echo "</div>";
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-2">
-                    <div class="footer_single_col">
-                        <h3></h3>
-                                                
-                    </div>
+                    
                 </div>
+                
+                
+
                 <div class="col-12 col-md-6 col-lg-2">
-                    <div class="footer_single_col information">
-                        <h3></h3>
-                        
+                    <div class="footer_single_col">
+                        <h3>Useful Links</h3>
+                        <ul class="quick_inf0">
+                            <li><a href="about.php">About Us</a></li>
+                            <li><a href="contact.php">Contact Us</a></li>
+                            <li><a href="Sell.php">Sell an Item</a></li>
+                            <li><a href="index-3.php">Back to Main Page</a></li>
+                            
+                        </ul>                         
                     </div>
                 </div>
+                        
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="footer_single_col contact">
                         <h3>Contact Us</h3>
@@ -328,17 +334,15 @@ echo "</div>";
                             <span>+000 124 325</span> 
                             <span class="email">info@yourdomain.com</span>
                         </div>
-                        <ul class="social_items d-flex list-unstyled">
-                            <li><a href="#"><i class="fab fa-facebook-f fb-icon"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter twitt-icon"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in link-icon"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram ins-icon"></i></a></li>
-                        </ul>
+                        
                     </div>
                 </div>
                  <div class="col-12 col-md-12 col-lg-12">
                     <div class="">
-                        <a></a>>
+                        <a></a>
+
+                        <br>
+                        <br>
                     </div>
                  </div>
             </div>
