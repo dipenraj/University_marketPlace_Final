@@ -223,7 +223,7 @@
                                         <div class="col-12 col-lg-12 col-md-12 col-lg-12">
                                             <div class="form-group">
                                                 <label class="control-label">Email</label>
-                                                <input type="email" name="email" class="form-control" placeholder="Username" required="">
+                                                <input type="email" name="email" class="form-control" placeholder="User Email" required="">
                                             </div>
                                         </div>
                                         <div class="col-12 col-lg-12 col-md-12 col-lg-12">
@@ -250,7 +250,7 @@
                                         <div class="col-12 col-lg-12 col-md-12 col-lg-12">
                                             <div class="form-group">
                                                 <label  class="control-label">Name</label>
-                                                <input type="text" class="form-control" name="name" placeholder="Name" pattern="[A-Za-z]+" required>
+                                                <input type="text" class="form-control" name="name" placeholder="Name" required>
                                             </div>
                                         </div>                                        
                                         <div class="col-12 col-lg-12 col-md-12 col-lg-12">

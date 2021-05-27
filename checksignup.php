@@ -17,8 +17,23 @@ $sql ="insert into stud_user(phone_num,email,username,acc_password,stu_dob,addre
 
 	 if(mysqli_query($con,$sql)){	
 
-	 	echo'Thanks for registration, Login to Continue';
-	 	header("location:index-3.php");
+	 	echo "<!DOCTYPE html>
+<html>
+<body>
+
+
+
+
+
+<script>
+
+  alert('Thanks for registering, Now Login to Continue.');
+
+</script>
+
+</body>
+</html>";
+	 	
 	 }
 
 else

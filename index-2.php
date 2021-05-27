@@ -229,7 +229,7 @@ echo "</div>";
                                         <div class="col-12 col-lg-12 col-md-12 col-lg-12">
                                             <div class="form-group">
                                                 <label class="control-label">Email</label>
-                                                <input type="email" class="form-control" placeholder="Username">
+                                                <input type="email" class="form-control" placeholder="User Email">
                                             </div>
                                         </div>
                                         <div class="col-12 col-lg-12 col-md-12 col-lg-12">
