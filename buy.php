@@ -218,6 +218,38 @@ echo "</div>";
 
 
                         ";
+
+
+
+
+                        echo "<section class='events-area'>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-12 col-sm-12 col-md-12 col-lg-15'>
+                <div class='col-sm-12 events_full_box'>
+                <div class='events_single'>
+                    <div class='event_banner'>
+                        <a href='#'><img src='uploads/".$row['product_image']."' alt='' class='img-fluid'></a>
+                    </div>
+                    <div class='event_info'>
+                        <h3><a href='#' title=''>".$row['product_name']."</a></h3>
+                        <div class='events_time'>
+                            <span class='time'><i class='flaticon-clock-circular-outline'></i>".$row['product_seller']."</span>
+                            <span><i class='fas fa-map-marker-alt'></i> ".$row['product_category']."</span>
+                        </div>
+                         <p>".$row['product_description']."</p>
+                        <div class='event_dete' style='bottom:100px;height:40px; width:170px;'>
+                        
+                            <span class='date'> Price | A$ ".$row['product_price']."</span>
+                            
+                        </div>
+                    </div>
+                </div>  
+            </div> 
+        </div>
+        </div>
+    </div>
+</section>";
                             }
 
 
@@ -233,33 +265,9 @@ echo "</div>";
                     </div>
                 </section>
 
-<section class="events-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-15">
-                <div class="col-sm-12 events_full_box">
-                <div class="events_single">
-                    <div class="event_banner">
-                        <a href="#"><img src="images/events/event_3.jpg" alt="" class="img-fluid"></a>
-                    </div>
-                    <div class="event_info">
-                        <h3><a href="#" title="">Robotic Process Automation Tech<br> Primer</a></h3>
-                        <div class="events_time">
-                            <span class="time"><i class="flaticon-clock-circular-outline"></i>8.00 Am - 5.00 Pm</span>
-                            <span><i class="fas fa-map-marker-alt"></i>Hall - A | Broklyn Audiitorium</span>
-                        </div>
-                         <p>Lorem ipsum dolor sit amet mollis dapibus arcur donec viverra to phasellus<br> eget. Etiam maecenas vel vici quis dictum rutrum nec nisi et. Ac pena<br> tibus aenean laoreet.</p>
-                        <div class="event_dete">
-                            <span class="date">20</span>
-                            <span>Jan</span>
-                        </div>
-                    </div>
-                </div>  
-            </div> 
-        </div>
-        </div>
-    </div>
-</section>
+
+
+
 
 
                                                     
