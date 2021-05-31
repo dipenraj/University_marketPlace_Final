@@ -419,7 +419,7 @@ echo "</div>";
                         </div>
                         <div class="courses_info">
                             
-                            <a href="#" class="cart_btn">Add to Cart</a>
+                            <a href="#" class="cart_btn">Buy this Product</a>
                         </div>
                     </div>
                 </div><!-- Ends: .single courses -->

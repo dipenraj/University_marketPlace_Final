@@ -234,8 +234,8 @@ echo "</div>";
                     <div class='event_info'>
                         <h3><a href='#' title=''>".$row['product_name']."</a></h3>
                         <div class='events_time'>
-                            <span class='time'><i class='flaticon-clock-circular-outline'></i>".$row['product_seller']."</span>
-                            <span><i class='fas fa-map-marker-alt'></i> ".$row['product_category']."</span>
+                            <span class='time'><i class='flaticon-clock-circular-outline'></i> Seller | ".$row['product_seller']."</span>
+                            <span><i class='fas fa-map-marker-alt'></i> Category | ".$row['product_category']."</span>
                         </div>
                          <p>".$row['product_description']."</p>
                         <div class='event_dete' style='bottom:100px;height:40px; width:170px;'>
@@ -243,6 +243,29 @@ echo "</div>";
                             <span class='date'> Price | A$ ".$row['product_price']."</span>
                             
                         </div>
+                       <section class='contact_info_wrapper'>
+                            <div class='container'>  
+                                <div>  
+                                    <div>
+                                        <button type='submit' class='text-center' style='background: #ff5a2c;
+                                          font-weight: 500;
+                                          border-radius: 100;
+                                          color: #ffffff;
+                                          font-family: 'Poppins', sans-serif;
+                                          display: inline-block;
+                                          font-size: 12px;
+                                          text-transform: uppercase;
+                                          text-decoration: none;
+                                          height: 36px;
+                                          line-height: 36px;
+                                          padding: 0 20px;
+                                          -webkit-transition: all 0.3s ease-in-out;
+                                          transition: all 0.3s ease-in-out;'>Buy this Item !
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>   
                     </div>
                 </div>  
             </div> 
