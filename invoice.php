@@ -35,9 +35,106 @@ session_start();
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/demo.css">
+    <head>
+		<meta charset="utf-8" />
+		<title>Invoice</title>
+
+		<style>
+			.invoice-box {
+				max-width: 800px;
+				margin: auto;
+				padding: 30px;
+				border: 1px solid #eee;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+				font-size: 16px;
+				line-height: 24px;
+				font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+				color: #555;
+			}
+
+			.invoice-box table {
+				width: 100%;
+				line-height: inherit;
+				text-align: left;
+			}
+
+			.invoice-box table td {
+				padding: 5px;
+				vertical-align: top;
+			}
+
+			.invoice-box table tr td:nth-child(2) {
+				text-align: right;
+			}
+
+			.invoice-box table tr.top table td {
+				padding-bottom: 20px;
+			}
+
+			.invoice-box table tr.top table td.title {
+				font-size: 45px;
+				line-height: 45px;
+				color: #333;
+			}
+
+			.invoice-box table tr.information table td {
+				padding-bottom: 40px;
+			}
+
+			.invoice-box table tr.heading td {
+				background: #eee;
+				border-bottom: 1px solid #ddd;
+				font-weight: bold;
+			}
+
+			.invoice-box table tr.details td {
+				padding-bottom: 20px;
+			}
+
+			.invoice-box table tr.item td {
+				border-bottom: 1px solid #eee;
+			}
+
+			.invoice-box table tr.item.last td {
+				border-bottom: none;
+			}
+
+			.invoice-box table tr.total td:nth-child(2) {
+				border-top: 2px solid #eee;
+				font-weight: bold;
+			}
+
+			@media only screen and (max-width: 600px) {
+				.invoice-box table tr.top table td {
+					width: 100%;
+					display: block;
+					text-align: center;
+				}
+
+				.invoice-box table tr.information table td {
+					width: 100%;
+					display: block;
+					text-align: center;
+				}
+			}
+
+			/** RTL **/
+			.invoice-box.rtl {
+				direction: rtl;
+				font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+			}
+
+			.invoice-box.rtl table {
+				text-align: right;
+			}
+
+			.invoice-box.rtl table tr td:nth-child(2) {
+				text-align: left;
+			}
+		</style>
     
 </head>
-<title>Buy page</title>
+<title>Invoice</title>
 <body>
     
 
@@ -82,7 +179,7 @@ session_start();
                                                     }
 
                                                     ?>
-                        <li class="nav-item"><a href="sell.php" class="nav-link active">Sell item</a></li>
+                        <li class="nav-item"><a href="sell.php" class="nav-link">Sell item</a></li>
                         <li class="nav-item"><a>
 <?php
 
@@ -117,7 +214,7 @@ echo "</div>";
                                                     {
 
                                                         
-                                                    echo "Buy this Item !";
+                                                    echo "Invoice of your item !";
 
                                                     
 
@@ -125,8 +222,7 @@ echo "</div>";
 
                                                     else
                                                     {
-                                                        echo "Buy this Item ! -
-                                                         Login to Continue";
+                                                        echo "Invoice of your item !";
                                                     }
 
                                                     ?></h1>
@@ -148,7 +244,38 @@ echo "</div>";
                 
             </div>
 
+            		<?php
+$con = mysqli_connect("localhost","root","","university_market_place");
+$hidden_id = $_POST['hidden_id'];
+$hidden_seller = $_POST['hidden_seller'];
+$buyer = $_SESSION['username'];
+$hidden_name = $_POST['hidden_name'];
 
+
+
+
+
+
+
+$sql ="insert into receipt(product_id,seller,buyer,product_name) values('$hidden_id','$hidden_seller','$buyer','$hidden_name')";
+
+
+
+	 if(mysqli_query($con,$sql)){	
+
+	 	echo "";
+	 	
+	 }
+
+else
+
+{
+	
+	echo "Try again";
+
+}
+
+?>
 
                 
 
@@ -174,38 +301,164 @@ echo "</div>";
 
                                 
 
+		
 
 
-                        echo "<section class='events-area'>
-    <div class='container'>
-        <div class='row'>
-            <div class='col-12 col-sm-12 col-md-12 col-lg-15'>
-            <form method='post' action='invoice.php' enctype='multipart/form-data'>
 
-                <div class='col-sm-12 events_full_box'>
-                <div class='events_single'>
-                    <div class='event_banner'>
-                        <a href='#'><img src='uploads/".$row['product_image']."' alt='' class='img-fluid'></a>
-                    </div>
-                    <div class='event_info'>
-                        <h3><a href='#' title=''>".$row['product_name']."</a></h3>
-                        <div class='events_time'>
-                            <span class='time'><i class='flaticon-clock-circular-outline'></i> Seller | ".$row['product_seller']."</span>
-                            <span><i class='fas fa-map-marker-alt'></i> Category | ".$row['product_category']."</span>
-                        </div>
-                         <p>".$row['product_description']."</p>
-                        <div class='event_dete' style='bottom:100px;height:40px; width:170px;'>
-                        
-                            <span class='date'> Price | A$ ".$row['product_price']."</span>
-                            <input type='hidden' name='hidden_name' value=".$row['product_name'].">
-                            <input type='hidden' name='hidden_seller' value=".$row['product_seller'].">
-                            <input type='hidden' name='hidden_id' value=".$row['product_id'].">
-                            <input type='hidden' name='hidden_price' value=".$row['product_price'].">
+
+								echo "<div class='invoice-box'>
+								    <form method='post' action='delete.php' enctype='multipart/form-data'>
+
+									<table>
+										<tr class='top'>
+											<td colspan='2'>
+												<table>
+													<tr>
+														<td class='title'>
+															<img src='./images/invoice_logo.png' alt='Company logo' style='width: 50%; max-width: 300px' />
+														</td>
+
+														<td>
+															Invoice #: ".$row['product_id']."
+														<input type='hidden' name='hidden_id' value=".$row['product_id'].">
+															
+															<br />
+															Created: <p id='date'></p>
+															<script>
+															document.getElementById('date').innerHTML = Date();
+															var today = new Date();
+
+															var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+															document.getElementById('date').innerHTML = date();
+															</script><br />
+															
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>";
+
+										?>
+
+										
+
+
+
+							<?php
+
+							echo "
+							
+
+				<tr class='heading'>
+					<td>Payment Method</td>
+
+					<td>Check #</td>
+				</tr>
+
+				<tr class='details'>
+					<td>Check</td>
+
+					<td>1000</td>
+				</tr>
+
+				<tr class='heading'>
+					<td>Item</td>
+
+					<td>Price</td>
+				</tr>
+
+				<tr class='item'>
+					<td>".$row['product_name']."</td>
+
+					<td>A$".$row['product_price']."</td>
+				</tr>
+
+				<tr class='item'>
+					<td>Delivery</td>
+
+					<td>$0</td>
+				</tr>
+
+				
+
+				<tr class='total'>
+					<td></td>
+
+					<td>Total:A$ ".$row['product_price']."</td>
+				</tr>";
+
+				?>
+				<?php
+										echo "
+
+										<tr class='information'>
+											<td colspan='2'>
+												<table>
+													<tr>
+														<td>
+															Sparksuite, Inc.<br />
+															12345 Sunny Road<br />
+															St.Kilda East, VIC 3183
+														</td>
+
+														<td>
+															<br />
+															Seller - ".$row['product_seller']."<br />";
+
+										?>
+
+
+			                    	 <?php
+
+			                     	if ($_POST['hidden_seller']) 
+
+			                     	{
+
+
+
+			                     	$seller = $_POST['hidden_seller'];
+                    
+
+				                     $sql = "SELECT email,phone_num,address FROM stud_user where username='$seller'";
+				                     $mysqli_result = mysqli_query($db,$sql);
+
+				                   			 while($row= mysqli_fetch_array($mysqli_result))
                             
-            
-                            
-                        </div>
-                       <section class='contact_info_wrapper'>
+					                            {				                               
+
+
+														echo "
+
+
+
+
+
+														".$row['email']."<br />
+														".$row['phone_num']."<br />
+															</td> 
+														</td></tr>
+							</table>
+							</td>
+							</tr>
+							"; 
+
+
+
+												}
+			                     				
+			                     	}
+									
+
+
+									?>
+
+
+
+				<?php
+
+				echo "
+			</table>
+			<section class='contact_info_wrapper'>
                             <div class='container'>  
                                 <div>  
                                     <div>
@@ -222,28 +475,32 @@ echo "</div>";
                                           line-height: 36px;
                                           padding: 0 20px;
                                           -webkit-transition: all 0.3s ease-in-out;
-                                          transition: all 0.3s ease-in-out;'>Buy this Item !
+                                          transition: all 0.3s ease-in-out;'>Click here to go to main Homepage
                                         </button>
                                     </div>
                                 </div>
                             </div>
-                        </section>   
-                    </div>
-                </div>  
-            </div> 
-            </form>
-        </div>
-        </div>
-    </div>
-</section>";
-                            }
+                        </section>
+			</form>
+		</div>";
+                            
+
+
+                            ?>
+
+
+
+
+                            <?php
+
+                         }
 
 
 
 
                    
                     
-           }
+                         }
 
                     ?>
                         
@@ -256,7 +513,11 @@ echo "</div>";
 
 
 
-     
+                                                    
+
+
+
+
 
 
 <!-- Footer -->  
@@ -353,4 +614,9 @@ echo "</div>";
 </body>
 
 
+
+
 </html>
+
+
+

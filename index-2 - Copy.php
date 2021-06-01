@@ -308,120 +308,18 @@ echo "</div>";
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="sub_title">
                     <h2>Marketplace items</h2>
-                    <p>All the students items will be shown here.</p> 
-                    <form method='post' enctype='multipart/form-data'>
-                    <select class="form-control" name="ccode" required=""> Choose Category
-                                                <option selected="">----Category----</option>
-                                                <option value="Sports"> Sports</option>
-                                                <option value="Education"> Education</option>
-                                                <option value="Music"> Music</option>
-                                            </select>
-                                            <button type="submit" name="c">select</button>
-
-                                        </form>
-
+                    <p>All the students items will be shown here.</p>  
                 </div><!-- ends: .section-header -->
             </div>
 
 
 
-                <?php
-
-if (isset($_POST['delete'])) {
-
-
-
-  $con = mysqli_connect("localhost","root","","university_market_place");
-    $id = $_POST['hidden_id'];
-
-  $sql = "DELETE FROM stud_user where stud_id='$id'";
-
-  if(mysqli_query($con,$sql)){  
-
-    echo "<script>
-          alert('The user has been deleted !');
-
-          setTimeout(function(){
-            window.location.href = 'admin_page.php';
-         }, 1000);
-
-          </script>";
-
-  
-
-        }
-      }
-
-?>
+                
 
                    
                     <?php
 
-                    if (isset($_POST['c'])) {
-                    $c =$_POST['ccode'];
                     $db = mysqli_connect("localhost","root","","university_market_place");
-                    $sql = "SELECT * FROM product where product_category='$c'";
-                    $result = mysqli_query($db,$sql);
-
-                    while($row= mysqli_fetch_array($result))
-
-                    {       
-
-                        
-
-                        
-                        
-                        echo "
-
-
-
- <div class='col-12 col-sm-6 col-md-6 col-lg-3'>
- <form method='post' action='buy.php' enctype='multipart/form-data'>
-                <div class='single-courses'>
-                    <div class='courses_banner_wrapper'>
-                        <div class='courses_banner'><a href='#'><img src='uploads/".$row['product_image']."' alt='' class='img-fluid'></a></div>
-                        <div class='purchase_price'>
-                            <a href='#' class='read_more-btn'> A$".$row['product_price']."</a>
-                        </div>
-                    </div>
-                    <div class='courses_info_wrapper'>
-                        <div class='courses_title'>
-                            <h3><a href='#'>".$row['product_name']."</a></h3>
-                            <div class='teachers_name'>Seller - ".$row['product_seller']." </div>
-                            <div class='teachers_name'>Category - ".$row['product_category']." </div>
-                            <input type='hidden' name='hidden_name' value=".$row['product_name'].">
-                            <input type='hidden' name='hidden_image' value=".$row['product_image'].">
-                            <input type='hidden' name='hidden_id' value=".$row['product_id'].">
-                        </div>
-
-                        <div class='courses_info'>
-                            
-                            <div class='col-12 col-sm-12 col-md-12 submit-btn'>
-                                        <button type='submit' name='buy' class='cart_btn'>Buy</button>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div><!-- Ends: .single courses -->
-                 </form>
-            </div><!-- Ends: . -->
-                        
-
-
-
-
-
-       
-
-
-
-                        ";}
-                    }
-                 
-
-                 else {
-                        $db = mysqli_connect("localhost","root","","university_market_place");
                     $sql = "SELECT * FROM product";
                     $result = mysqli_query($db,$sql);
 
@@ -479,12 +377,12 @@ if (isset($_POST['delete'])) {
 
 
                         ";
-                       }      
+                       
 
 
 
-                    
-}
+                    }
+
                     ?>
                         
 
@@ -506,7 +404,26 @@ if (isset($_POST['delete'])) {
                     
            
 
-            
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="single-courses">
+                    <div class="courses_banner_wrapper">
+                        <div class="courses_banner"><a href="#"><img src="images/courses/courses_2.jpg" alt="" class="img-fluid"></a></div>
+                        <div class="purchase_price">
+                            <a href="#" class="read_more-btn">$780</a>
+                        </div>
+                    </div>
+                    <div class="courses_info_wrapper">
+                        <div class="courses_title">
+                            <h3><a href="#">2015 Dell Laptop</a></h3>
+                            <div class="teachers_name">Seller - <a href="#" title="">Denise Wood</a></div>
+                        </div>
+                        <div class="courses_info">
+                            
+                            <a href="#" class="cart_btn">Buy this Product</a>
+                        </div>
+                    </div>
+                </div><!-- Ends: .single courses -->
+            </div><!-- Ends: . -->
 
 
 

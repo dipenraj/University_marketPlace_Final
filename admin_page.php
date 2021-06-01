@@ -3,6 +3,98 @@
 session_start();
 
 ?>
+
+
+
+<?php
+
+if (isset($_POST['delete'])) {
+
+
+
+  $con = mysqli_connect("localhost","root","","university_market_place");
+    $id = $_POST['hidden_id'];
+
+  $sql = "DELETE FROM stud_user where stud_id='$id'";
+
+  if(mysqli_query($con,$sql)){  
+
+    echo "<script>
+          alert('The user has been deleted !');
+
+          setTimeout(function(){
+            window.location.href = 'admin_page.php';
+         }, 1000);
+
+          </script>";
+
+  
+
+        }
+      }
+
+?>
+
+
+<?php
+
+if (isset($_POST['delete_product'])) {
+
+
+
+  $con = mysqli_connect("localhost","root","","university_market_place");
+    $id = $_POST['hidden_id'];
+
+  $sql = "DELETE FROM product where product_id='$id'";
+
+  if(mysqli_query($con,$sql)){  
+
+    echo "<script>
+          alert('The Product has been deleted !');
+
+          setTimeout(function(){
+            window.location.href = 'admin_page.php';
+         }, 1000);
+
+          </script>";
+
+  
+
+        }
+      }
+
+?>
+
+
+
+<?php
+
+if (isset($_POST['delete_payment'])) {
+
+
+
+  $con = mysqli_connect("localhost","root","","university_market_place");
+    $id = $_POST['hidden_id'];
+
+  $sql = "DELETE FROM receipt where Product_id='$id'";
+
+  if(mysqli_query($con,$sql)){  
+
+    echo "<script>
+          alert('The Transaction has been deleted !');
+
+          setTimeout(function(){
+            window.location.href = 'admin_page.php';
+         }, 1000);
+
+          </script>";
+
+  
+
+        }
+      }
+
+?>
 <!doctype html>
 <html lang="en">
 
@@ -62,52 +154,19 @@ session_start();
     <div class="edu_nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light bg-faded">
-                <a class="navbar-brand" href="index-2.php"><img src="images/logo.png" alt="logo"></a>
+                <a class="navbar-brand" href="admin_page.php"><img src="images/logo.png" alt="logo"></a>
                 <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav nav lavalamp ml-auto menu">
-                        <li class="nav-item"><a href="index-3.php" class="nav-link active">Home</a>
+                        <li class="nav-item"><a href="#Users" class="nav-link">Users</a>
                            
                         </li>
-                        <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#Products" class="nav-link">Products</a></li>
                              
-                        <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-                                                    <?php
-
-                                                    if(isset($_SESSION['username']))
-                                                    {
-
-                                                        
-                                                    echo " <li class='nav-item'><a href='signout.php' class='nav-link'>Sign out</a></li>";
-
+                        <li class="nav-item"><a href="#Payments" class="nav-link">Payments</a></li>
+                        <li class='nav-item'><a href='signoutadmin.php' class='nav-link'>Log out</a></li>
                                                     
-
-                                                    }
-
-                                                    else
-                                                    {
-                                                        echo "<li class='nav-item'><a href='index-3.php' class='nav-link'>Sign In</a></li>";
-                                                    }
-
-                                                    ?>
                        
-                        <li class="nav-item"><a href="sell.php" class="nav-link">Sell item</a></li>
-                        <li class="nav-item"><a>
-<?php
-
-if(isset($_SESSION['username']))
-{
-
-    
-echo "<div class='sticky'><p style='font-size:25px;margin-top:10px;margin-left:100px;'>Welcome</style>";
-echo " ";
-echo " ";
-echo  $_SESSION['username'];
-echo " ";
-echo "</div>";
-
-}
-
-?></a></li>
+                      
                     </ul>
                 </div>
               
@@ -128,7 +187,7 @@ echo "</div>";
 
                     <div class="slider-overlay"></div>
                     <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
-                    <img src="images/banner/banner_1.jpg" alt="Sky" class="rev-slidebg"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                    <img src="images/banner/banner_3.jpg" alt="Sky" class="rev-slidebg"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
                     <!-- LAYER NR. 1 -->
                     <div class="tp-caption font-lora sfb tp-resizeme letter-space-5 h-p" 
                         data-x="['left','center','center','center']" data-hoffset="['0','0','0','0']" 
@@ -163,7 +222,20 @@ echo "</div>";
                         data-paddingbottom="[10,10,10,10]"
                         data-paddingleft="[0,0,0,0]"
 
-                        style="z-index: 5; font-family:'Roboto', sans-serif; font-weight: 900; white-space: nowrap;text-transform:left;">Welcome to
+                        style="z-index: 5; font-family:'Roboto', sans-serif; font-weight: 900; white-space: nowrap;text-transform:left;">Welcome     <?php
+
+                                                    if(isset($_SESSION['name']))
+                                                    {
+
+                                                        
+                                                    echo $_SESSION['name'];
+
+                                                    
+
+                                                    }
+
+                                                    
+                                                    ?>
                     </div>
 
                     <!-- LAYER NR.3 -->
@@ -185,7 +257,7 @@ echo "</div>";
                         data-paddingbottom="[10,10,10,10]"
                         data-paddingleft="[0,0,0,0]"
 
-                        style="z-index: 5; font-family:'Roboto', sans-serif; font-weight: 900; white-space: nowrap;text-transform:left;">University Marketplace
+                        style="z-index: 5; font-family:'Roboto', sans-serif; font-weight: 900; white-space: nowrap;text-transform:left;"> 
                     </div>
 
                     <!-- LAYER NR. 4 -->
@@ -298,69 +370,314 @@ echo "</div>";
 
 
 
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - Responsive Table</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
 
 
 
-<section class="popular_courses">
-    <div class="container"> 
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="sub_title">
-                    <h2>Marketplace items</h2>
-                    <p>All the students items will be shown here.</p> 
-                    <form method='post' enctype='multipart/form-data'>
-                    <select class="form-control" name="ccode" required=""> Choose Category
-                                                <option selected="">----Category----</option>
-                                                <option value="Sports"> Sports</option>
-                                                <option value="Education"> Education</option>
-                                                <option value="Music"> Music</option>
-                                            </select>
-                                            <button type="submit" name="c">select</button>
-
-                                        </form>
-
-                </div><!-- ends: .section-header -->
-            </div>
-
-
-
-                <?php
-
-if (isset($_POST['delete'])) {
-
-
-
-  $con = mysqli_connect("localhost","root","","university_market_place");
-    $id = $_POST['hidden_id'];
-
-  $sql = "DELETE FROM stud_user where stud_id='$id'";
-
-  if(mysqli_query($con,$sql)){  
-
-    echo "<script>
-          alert('The user has been deleted !');
-
-          setTimeout(function(){
-            window.location.href = 'admin_page.php';
-         }, 1000);
-
-          </script>";
 
   
+  
+<style>
 
-        }
-      }
 
-?>
 
-                   
-                    <?php
+  .button {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
 
-                    if (isset($_POST['c'])) {
-                    $c =$_POST['ccode'];
+.button:hover {background-color:#FF0000}
+
+.button:active {
+  background-color: #FF0000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+body {
+  background-color: #91ced4;
+}
+body * {
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #327a81;
+  color: white;
+  font-size: 1.5em;
+  padding: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+img {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+
+.table-users {
+  border: 1px solid #327a81;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+  max-width: calc(100% - 2em);
+  margin: 1em auto;
+  overflow: hidden;
+  width: 1200px;
+}
+
+table {
+  width: 100%;
+}
+table td, table th {
+  color: #2b686e;
+  padding: 10px;
+}
+table td {
+  text-align: center;
+  vertical-align: middle;
+}
+table td:last-child {
+  font-size: 0.95em;
+  line-height: 1.4;
+  text-align: left;
+}
+table th {
+  background-color: #daeff1;
+  font-weight: 300;
+}
+table tr:nth-child(2n) {
+  background-color: white;
+}
+table tr:nth-child(2n+1) {
+  background-color: #edf7f8;
+}
+
+@media screen and (max-width: 700px) {
+  table, tr, td {
+    display: block;
+  }
+
+  td:first-child {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+  }
+  td:not(:first-child) {
+    clear: both;
+    margin-left: 100px;
+    padding: 4px 20px 4px 90px;
+    position: relative;
+    text-align: left;
+  }
+  td:not(:first-child):before {
+    color: #91ced4;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+  }
+  td:nth-child(2):before {
+    content: "Name:";
+  }
+  td:nth-child(3):before {
+    content: "Email:";
+  }
+  td:nth-child(4):before {
+    content: "Phone:";
+  }
+  td:nth-child(5):before {
+    content: "Comments:";
+  }
+
+  tr {
+    padding: 10px 0;
+    position: relative;
+  }
+  tr:first-child {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header {
+    background-color: transparent;
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+    padding: 0;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  img {
+    border: 3px solid;
+    border-color: #daeff1;
+    height: 100px;
+    margin: 0.5rem 0;
+    width: 100px;
+  }
+
+  td:first-child {
+    background-color: #c8e7ea;
+    border-bottom: 1px solid #91ced4;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+    width: 100%;
+  }
+  td:not(:first-child) {
+    margin: 0;
+    padding: 5px 1em;
+    width: 100%;
+  }
+  td:not(:first-child):before {
+    font-size: 0.8em;
+    padding-top: 0.3em;
+    position: relative;
+  }
+  td:last-child {
+    padding-bottom: 1rem !important;
+  }
+
+  tr {
+    background-color: white !important;
+    border: 1px solid #6cbec6;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    margin: 0.5rem 0;
+    padding: 0;
+  }
+
+  .table-users {
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div class="table-users">
+   <div class="header">Signed Up students</div>
+   
+   <table cellspacing="0">
+      <tr>
+         <th>Picture</th>
+         <th>Name</th>
+         <th>Email</th>
+         <th>Phone</th>
+         <th width="230">Comments</th>
+      </tr>
+
+      <tr>
+         <td><img src="https://i.picsum.photos/id/1005/100/100.jpg" alt="" /></td>
+         <td>Jane Doe</td>
+         <td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3359525d561d575c5673555c5c1d505c5e">[email&#160;protected]</a></td>
+         <td>01 800 2000</td>
+         <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </td>
+      </tr>
+
+      <tr>
+         <td><img src="https://i.picsum.photos/id/1027/100/100.jpg" alt="" /></td>
+         <td>John Doe</td>
+         <td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6f05000701410b000a2f090000410c0002">[email&#160;protected]</a></td>
+         <td>01 800 2000</td>
+         <td>Blanditiis, aliquid numquam iure voluptatibus ut maiores explicabo ducimus neque, nesciunt rerum perferendis, inventore.</td>
+      </tr>
+
+      <tr>
+         <td><img src="https://i.picsum.photos/id/64/100/100.jpg" alt="" /></td>
+         <td>Jane Smith</td>
+         <td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e08a818e85ce938d899488a0868f8fce838f8d">[email&#160;protected]</a></td>
+         <td>01 800 2000</td>
+         <td> Culpa praesentium unde pariatur fugit eos recusandae voluptas.</td>
+      </tr>
+      
+      <tr>
+         <td><img src="https://i.picsum.photos/id/1025/100/100.jpg" alt="" /></td>
+         <td>John Smith</td>
+         <td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f2989d9a9cdc819f9b869ab2949d9ddc919d9f">[email&#160;protected]</a></td>
+         <td>01 800 2000</td>
+         <td>Aut voluptatum accusantium, eveniet, sapiente quaerat adipisci consequatur maxime temporibus quas, dolorem impedit.</td>
+      </tr>
+   </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-users"><a id="Users">.</a>
+   <div class="header">Signed Up students</div>
+   
+   <table cellspacing="0">
+      <tr>
+          <th>Name</th>
+         <th>Email</th>
+         <th>Phone no.</th>
+         <th>Date of Birth</th>
+         <th>Password</th>
+         <th width="230">Address</th>
+         <th> Manage user </th>
+      </tr>
+        
+
+
+        <?php
+
                     $db = mysqli_connect("localhost","root","","university_market_place");
-                    $sql = "SELECT * FROM product where product_category='$c'";
+                    $sql = "SELECT * FROM stud_user";
                     $result = mysqli_query($db,$sql);
 
                     while($row= mysqli_fetch_array($result))
@@ -373,55 +690,58 @@ if (isset($_POST['delete'])) {
                         
                         echo "
 
+                        <form method='post' enctype='multipart/form-data'>
+                        <tr>
+          <td>".$row['username']."</td>
+         <td>".$row['email']."</td>
+         <td>".$row['phone_num']."</td>
+         <td>".$row['stu_dob']."</td>
+         <td>".$row['acc_password']."</td>
+         <td width='230'>".$row['address']."</td>
+         <input type='hidden' name='hidden_id' value=".$row['stud_id'].">
+         <td><button class='button' name='delete' type='submit'>Delete User</button></td>
+      </tr>
+
+      </form>";
+
+                      }
+
+                      ?>
+      
+   </table>
+</div>
 
 
- <div class='col-12 col-sm-6 col-md-6 col-lg-3'>
- <form method='post' action='buy.php' enctype='multipart/form-data'>
-                <div class='single-courses'>
-                    <div class='courses_banner_wrapper'>
-                        <div class='courses_banner'><a href='#'><img src='uploads/".$row['product_image']."' alt='' class='img-fluid'></a></div>
-                        <div class='purchase_price'>
-                            <a href='#' class='read_more-btn'> A$".$row['product_price']."</a>
-                        </div>
-                    </div>
-                    <div class='courses_info_wrapper'>
-                        <div class='courses_title'>
-                            <h3><a href='#'>".$row['product_name']."</a></h3>
-                            <div class='teachers_name'>Seller - ".$row['product_seller']." </div>
-                            <div class='teachers_name'>Category - ".$row['product_category']." </div>
-                            <input type='hidden' name='hidden_name' value=".$row['product_name'].">
-                            <input type='hidden' name='hidden_image' value=".$row['product_image'].">
-                            <input type='hidden' name='hidden_id' value=".$row['product_id'].">
-                        </div>
-
-                        <div class='courses_info'>
-                            
-                            <div class='col-12 col-sm-12 col-md-12 submit-btn'>
-                                        <button type='submit' name='buy' class='cart_btn'>Buy</button>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div><!-- Ends: .single courses -->
-                 </form>
-            </div><!-- Ends: . -->
-                        
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 
 
+<div class="table-users"><a id="Products">.</a>
+   <div class="header">Products</div>
+   
+   <table cellspacing="0">
+      <tr>
+          
+          <th>image</th>
+          <th>Name</th>
+          <th>Price</th>
+         <th>Category</th>
+         <th>Seller</th>
+         <th width="230">Description</th>
+         <th> Manage Product </th>
+      </tr>
+        
 
-       
 
+        <?php
 
-
-                        ";}
-                    }
-                 
-
-                 else {
-                        $db = mysqli_connect("localhost","root","","university_market_place");
+                    $db = mysqli_connect("localhost","root","","university_market_place");
                     $sql = "SELECT * FROM product";
                     $result = mysqli_query($db,$sql);
 
@@ -434,85 +754,98 @@ if (isset($_POST['delete'])) {
                         
                         
                         echo "
+                        <form method='post' enctype='multipart/form-data'>
+                        <tr>
+          <td><img src='uploads/".$row['product_image']."' alt='' class='img-fluid'></td>
+         <td>".$row['product_name']."</td>
+         <td>".$row['product_price']."</td>
+         <td>".$row['product_category']."</td>
+         <td>".$row['product_seller']."</td>
+         <td width='230'>".$row['product_description']."</td>
+         <input type='hidden' name='hidden_id' value=".$row['product_id'].">
+         <td><button class='button' name='delete_product' method='post'>Delete Product</button></td>
+      </tr>
+      </form>";
+
+                      }
+
+                      ?>
+     </div> 
+   </table>
 
 
 
- <div class='col-12 col-sm-6 col-md-6 col-lg-3'>
- <form method='post' action='buy.php' enctype='multipart/form-data'>
-                <div class='single-courses'>
-                    <div class='courses_banner_wrapper'>
-                        <div class='courses_banner'><a href='#'><img src='uploads/".$row['product_image']."' alt='' class='img-fluid'></a></div>
-                        <div class='purchase_price'>
-                            <a href='#' class='read_more-btn'> A$".$row['product_price']."</a>
-                        </div>
-                    </div>
-                    <div class='courses_info_wrapper'>
-                        <div class='courses_title'>
-                            <h3><a href='#'>".$row['product_name']."</a></h3>
-                            <div class='teachers_name'>Seller - ".$row['product_seller']." </div>
-                            <div class='teachers_name'>Category - ".$row['product_category']." </div>
-                            <input type='hidden' name='hidden_name' value=".$row['product_name'].">
-                            <input type='hidden' name='hidden_image' value=".$row['product_image'].">
-                            <input type='hidden' name='hidden_id' value=".$row['product_id'].">
-                        </div>
 
-                        <div class='courses_info'>
-                            
-                            <div class='col-12 col-sm-12 col-md-12 submit-btn'>
-                                        <button type='submit' name='buy' class='cart_btn'>Buy</button>
 
-                            </div>
 
-                        </div>
-                    </div>
-                </div><!-- Ends: .single courses -->
-                 </form>
-            </div><!-- Ends: . -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<div class="table-users"><a id="Payments">.</a>
+   <div class="header">Payments</div>
+   
+   <table cellspacing="0">
+      <tr>
+          <th>Product_id</th>
+         <th>Seller</th>
+         <th>Buyer</th>
+         <th>Product</th>
+         <th> Manage Transaction </th>
+      </tr>
+        
+
+
+        <?php
+
+                    $db = mysqli_connect("localhost","root","","university_market_place");
+                    $sql = "SELECT * FROM receipt";
+                    $result = mysqli_query($db,$sql);
+
+                    while($row= mysqli_fetch_array($result))
+
+                    {       
+
                         
 
-
-
-
-
-       
-
-
-
-                        ";
-                       }      
-
-
-
-                    
-}
-                    ?>
                         
+                        
+                        echo "<form method='post' enctype='multipart/form-data'><tr>
+          <td>".$row['product_id']."</td>
+         <td>".$row['seller']."</td>
+         <td>".$row['buyer']."</td>
+         <td>".$row['product_name']."</td>
+         <input type='hidden' name='hidden_id' value=".$row['product_id'].">
+         <td><button class='button' name='delete_payment' method='post'>Delete Transaction</button></td>
+      </tr></form>";
 
-            
+                      }
+
+                      ?>
+      
+   </table>
+</div>
+  
+  
+  
+  
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+
+</html>
+ 
 
 
 
 
 
 
-
-
-
-
-
-
-
-                
-                    
-           
-
-            
-
-
-
-
-          
-</section><!-- ./ End Courses Area section -->
 
 
 
@@ -637,3 +970,9 @@ if (isset($_POST['delete'])) {
 
 
 </html>
+
+
+
+
+
+

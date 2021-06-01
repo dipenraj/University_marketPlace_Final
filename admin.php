@@ -1,3 +1,7 @@
+
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,7 +11,7 @@
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="Ecology Theme">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University Market Place</title>
+    <title>Admin Panel</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <!-- Goole Font -->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700" rel="stylesheet">
@@ -94,7 +98,7 @@
                         data-responsive_offset="on" 
                         data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":400,"to":"o:1;","delay":100,"split":"chars","splitdelay":0.05,"ease":"Power3.easeInOut"},{"delay":"wait","speed":100,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
 
-                        style="z-index: 7; color:#fff; font-family:'Rubik', sans-serif; max-width: auto; max-height: auto; white-space: nowrap; font-weight:500;">The one place to get all your needs
+                        style="z-index: 7; color:#fff; font-family:'Rubik', sans-serif; max-width: auto; max-height: auto; white-space: nowrap; font-weight:500;">
                     </div>
                     <!-- LAYER NR. 2 -->
                     <div class="tp-caption NotGeneric-Title   tp-resizeme" 
@@ -114,7 +118,7 @@
                         data-paddingbottom="[10,10,10,10]"
                         data-paddingleft="[0,0,0,0]"
 
-                        style="z-index: 5; font-family:'Roboto', sans-serif; font-weight: 700; white-space: nowrap;text-transform:left;"> University 
+                        style="z-index: 5; font-family:'Roboto', sans-serif; font-weight: 700; white-space: nowrap;text-transform:left;"> Login 
                     </div>
 
                     <!-- LAYER NR.3 -->
@@ -136,7 +140,7 @@
                         data-paddingbottom="[10,10,10,10]"
                         data-paddingleft="[0,0,0,0]"
 
-                        style="z-index: 5; font-family:'Roboto', sans-serif; font-weight: 700; white-space: nowrap;text-transform:left;"> Marketplace
+                        style="z-index: 5; font-family:'Roboto', sans-serif; font-weight: 700; white-space: nowrap;text-transform:left;"> as an admin
                     </div>
                    
 
@@ -165,10 +169,11 @@
                         style="z-index: 14; white-space: nowrap; font-weight: 500; color: #ffffff;font-family:Rubik; text-transform:uppercase; background-color:#ff5a2c; border-color:rgba(0, 0, 0, 1.00); border-width:2px;  border-radius: 3px;">Get Started Now !
                     </div></a>
 
-                    <a href="admin.php" class="nav-link sign-in js-modal-show"><div class="tp-caption rev-btn rev-btn left_btn" 
+
+                    <a href="index-3.php" class="nav-link sign-in js-modal-show"><div class="tp-caption rev-btn rev-btn left_btn" 
                         id="slide-2939-layer-8" 
                         data-x="['center','center','center','center']" data-hoffset="['400','280','190','120']" 
-                        data-y="['middle','middle','top','top']"  data-voffset="['500','400','1000','600']" 
+                        data-y="['middle','middle','top','top']"  data-voffset="['500','400','600','450']" 
                         data-fontsize="['14','14','10','8']"
                         data-lineheight="['34','34','30','20']"
                         data-width="none"
@@ -185,7 +190,7 @@
                         data-paddingbottom="[12,12,8,8]"
                         data-paddingleft="[40,40,30,25]"
 
-                        style="z-index: 14; white-space: nowrap; font-weight: 500; color: #ffffff;font-family:Rubik; text-transform:uppercase; background-color:#ff5a2c; border-color:rgba(0, 0, 0, 1.00); border-width:2px;  border-radius: 3px;">login for admin
+                        style="z-index: 14; white-space: nowrap; font-weight: 500; color: #ffffff;font-family:Rubik; text-transform:uppercase; background-color:#ff5a2c; border-color:rgba(0, 0, 0, 1.00); border-width:2px;  border-radius: 3px;">Go to home page
                     </div></a>
 
                     <!-- LAYER NR. 5 -->
@@ -224,7 +229,7 @@
                     <div class="col-12 col-lg-12 col-md-12 col-lg-12 login_option_btn">
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#login" role="tab">Login</a></li>
-                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#panel2" role="tab">Register</a></li>
+                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#panel2" role="tab"></a></li>
                         </ul>
                     </div>
                     <div class="col-12 col-lg-12 col-md-12 col-lg-12">
@@ -241,7 +246,7 @@
     }       
 
     ?>
-                                <form action="clogin.php" method="post">
+                                <form action="cloginadmin.php" method="post">
                                     <div class="row">
                                         <div class="col-12 col-lg-12 col-md-12 col-lg-12">
                                             <div class="form-group">
@@ -328,132 +333,13 @@
 
 
 
-<section class="unlimited_possibilities">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="sub_title">
-                    <h2>Say Hello to your new favourite place</h2>
-                    <p>Register now and join University students on the University marketplace for all the second hand stuff</p>  
-                </div><!-- ends: .section-header -->
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                 <div class="single_item single_item_first">
-                    <div class="icon_wrapper">
-                        <i class="flaticon-student"></i>
-                    </div>
-                    <div class="blog_title">
-                        <h3><a href="#" title="">Make deals within your campus</a></h3> 
-                        <p>Now you no need to go outside for your campus needs, Just simply register and get the best of your college life needs</p>                    
-                    </div>   
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="single_item single_item_center">
-                    <div class="icon_wrapper">
-                        <i class="flaticon-university"></i>
-                    </div>
-                    <div class="blog_title">
-                        <h3><a href="#" title="">Trusted purchase</a></h3> 
-                        <p>Thats an Awesome Part! You are dealing with your college mate or anyone whom you know.</p>                    
-                    </div>   
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-               <div class="single_item single_item_last">
-                <div class="icon_wrapper">
-                        <i class="flaticon-diploma"></i>
-                    </div>
-                    <div class="blog_title">
-                        <h3><a href="#" title="">Multiple Producsts, One Destination</a></h3> 
-                        <p>You can sell books, Musical Intruments, Sports equipments anytime</p>
-                    </div>   
-                </div>
-            </div>             
-        </div>
-    </div>
-</section><!-- End Unlimited Possibilities -->
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="teamgroup">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 p-0"> 
-                <div></div>  
-                <div class="teamgroup_info_banner">
-                    <img src="images/banner/teamgroup.png" alt="" class="img-fluid">
-                </div>  
-            </div>
-        </div>
-    </div>                
-</section><!-- End Team Group -->
 
 
 <!-- Footer -->  
 <footer class="footer_3">
     <div class="container">
           
-        <div class="footer_top">
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="footer_single_col footer_intro">
-                        <img src="images/logo2.png" alt="" class="f_logo">
-                        <p>Say hello to your new favourite thing. Buy and sell University second hand stuffs from the UNi students. Whenever and whereever.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-2">
-                    
-                </div>
-                
-                
-
-                <div class="col-12 col-md-6 col-lg-2">
-                    <div class="footer_single_col">
-                        <h3>Useful Links</h3>
-                        <ul class="quick_inf0">
-                            <li><a href="about.php">About Us</a></li>
-                            <li><a href="contact.php">Contact Us</a></li>
-                            <li><a href="Sell.php">Sell an Item</a></li>
-                            <li><a href="index-3.php">Back to Main Page</a></li>
-                            
-                        </ul>                         
-                    </div>
-                </div>
-                        
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="footer_single_col contact">
-                        <h3>Contact Us</h3>
-                        <p>Feel free to get in touch us via Phone or send us a message.</p>
-                        <div class="contact_info">
-                            <span>+000 124 325</span> 
-                            <span class="email">info@yourdomain.com</span>
-                        </div>
-                        
-                    </div>
-                </div>
-                 <div class="col-12 col-md-12 col-lg-12">
-                    <div class="">
-                        <a></a>
-
-                        <br>
-                        <br>
-                    </div>
-                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="shapes_bg">
-        <img src="images/shapes/waves.png" alt="" class="shape_3">        
+              
     </div>    
 </footer><!-- End Footer -->
 
