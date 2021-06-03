@@ -29,7 +29,13 @@ $sql ="insert into stud_user(phone_num,email,username,acc_password,stu_dob,addre
 
   alert('Thanks for registering, Now Login to Continue.');
 
+  setTimeout(function(){
+            window.location.href = 'admin_page.php';
+         }, 500);
+
 </script>
+
+
 
 </body>
 </html>";

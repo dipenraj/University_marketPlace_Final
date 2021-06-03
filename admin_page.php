@@ -602,51 +602,7 @@ table tr:nth-child(2n+1) {
 </head>
 
 <body translate="no" >
-  <div class="table-users">
-   <div class="header">Signed Up students</div>
-   
-   <table cellspacing="0">
-      <tr>
-         <th>Picture</th>
-         <th>Name</th>
-         <th>Email</th>
-         <th>Phone</th>
-         <th width="230">Comments</th>
-      </tr>
-
-      <tr>
-         <td><img src="https://i.picsum.photos/id/1005/100/100.jpg" alt="" /></td>
-         <td>Jane Doe</td>
-         <td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3359525d561d575c5673555c5c1d505c5e">[email&#160;protected]</a></td>
-         <td>01 800 2000</td>
-         <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </td>
-      </tr>
-
-      <tr>
-         <td><img src="https://i.picsum.photos/id/1027/100/100.jpg" alt="" /></td>
-         <td>John Doe</td>
-         <td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6f05000701410b000a2f090000410c0002">[email&#160;protected]</a></td>
-         <td>01 800 2000</td>
-         <td>Blanditiis, aliquid numquam iure voluptatibus ut maiores explicabo ducimus neque, nesciunt rerum perferendis, inventore.</td>
-      </tr>
-
-      <tr>
-         <td><img src="https://i.picsum.photos/id/64/100/100.jpg" alt="" /></td>
-         <td>Jane Smith</td>
-         <td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e08a818e85ce938d899488a0868f8fce838f8d">[email&#160;protected]</a></td>
-         <td>01 800 2000</td>
-         <td> Culpa praesentium unde pariatur fugit eos recusandae voluptas.</td>
-      </tr>
-      
-      <tr>
-         <td><img src="https://i.picsum.photos/id/1025/100/100.jpg" alt="" /></td>
-         <td>John Smith</td>
-         <td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f2989d9a9cdc819f9b869ab2949d9ddc919d9f">[email&#160;protected]</a></td>
-         <td>01 800 2000</td>
-         <td>Aut voluptatum accusantium, eveniet, sapiente quaerat adipisci consequatur maxime temporibus quas, dolorem impedit.</td>
-      </tr>
-   </table>
-</div>
+ 
 
 
 
